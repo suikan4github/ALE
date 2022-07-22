@@ -1,0 +1,6 @@
+#! /bin/sh
+
+# Ubuntu 22.04 へのTexLiveのインストールスクリプト。
+
+# 基本的なツール類のインストール
+sudo apt-get install -y git ca-certificates build-essential 
