@@ -1,8 +1,8 @@
 \chapter{既知の問題}
 \label{sec:appendix10}
 
-\section{DRAWIOファイルをPDFに変換できない}
-この問題はWSL環境でのみ発生する。
+\section{DRAWIOファイルをPDFに変換できない(1)}
+WSL環境ではDRAWIOファイルをPDFに変換できません。
 
 DRAWIOファイルの変換にはdrawioプログラムを使用していますが、この変換
 がWSLでのみ異常終了します。原因はシステムでd-busサービスがはしって
@@ -15,6 +15,17 @@ DRAWIOファイルの変換にはdrawioプログラムを使用しています�
   
 \end{lstlisting}
 
+\section{DRAWIOファイルをPDFに変換できない(2)}
+\LaTeX\ Workshopを使って文書を自動コンパイルする場合、
+DRAWIOファイルがPDFに変換されません。
+
+この問題はVS CODEがELECTRONアプリケーションを実行する
+やりかたによるものと思われます~\cite{ELECTRON_RUN_AS_NODE}。
+
+DRAWIOを利用しない文書はこの問題の影響をうけません。DRAWIOによる
+図形を使用する場合は、あらかじめ手動でscript/convert2pdfを実行して
+ください。
+
 \section{索引が空だと異常終了する}
 索引を作成するにはpreamble.texで宣言している\lstinline{\term}マクロを使用します。
 
@@ -23,3 +34,4 @@ DRAWIOファイルの変換にはdrawioプログラムを使用しています�
 
 対策として最低でも一つ用語を索引に入れるか、\lstinline{\printindex}による
 索引をやめてください。
+

@@ -17,6 +17,7 @@ if [ $1 -nt $2 ] || [ ! -e $2 ]; then
     # Drawing by drawio? 
     # Crop the drawing with 10pt margin. 
     if [ "${1##*.}" = "drawio" ]; then
+        echo "drawio -xf pdf --crop -b 10 -o" 1>&2
         drawio -xf pdf --crop -b 10 -o  $2 $1 # Convert it
     fi
 
