@@ -18,11 +18,13 @@ sudo apt-get install -y imagemagick
 find /etc/ImageMagic*/policy.xml | xargs sudo sed -i /^.*pattern=\"PDF\".*$/d 
 
 
-# Install Live Tex
+# Install TeX Live
 wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 tar xvf install-tl-unx.tar.gz
 cd install-tl-2*
 sudo ./install-tl -no-gui -repository http://mirror.ctan.org/systems/texlive/tlnet/
+# Adding path of TeX
+sudo /usr/local/texlive/????/bin/*/tlmgr path add
 
 # By placing the following code in the ~/latexmkrc, TeX file is compiled 
 # for each time the file is saved.
