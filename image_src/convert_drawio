@@ -1,0 +1,18 @@
+#!/bin/sh
+# Convert drawio file to pdf only when the source is younger than destination
+
+# $0 : command scrift file name
+# $1 : source file path
+# $2 : destination file path
+
+
+# drawio parameter is : 
+#    -x : Export
+#    -f : Export file format "pdf", "png",...
+#    --crop : Take figure only. Not entire page. 
+#    - b n : Set border area to n pt. where pt is 1/100 inch. 
+
+# if the source is younger than destination or destination doesn't exist
+if [ $1 -nt $2 ] || [ ! -e $2 ]; then  
+    drawio -xf pdf --crop -b 10 -o  $2 $1
+fi
