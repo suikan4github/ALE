@@ -11,3 +11,6 @@
 # 作業中にダウンロードしたTexファイルを無視する
 install-tl-2*/
 install-tl-unx.tar.gz
+
+# DrawIOのバックアップファイル
+*.bkp
