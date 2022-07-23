@@ -1,4 +1,25 @@
-\chapter{付録}
+\chapter{既知の問題}
 \label{sec:appendix10}
 
-付録
+\section{DRAWIOファイルをPDFに変換できない}
+この問題はWSL環境でのみ発生する。
+
+DRAWIOファイルの変換にはdrawioプログラムを使用していますが、この変換
+がWSLでのみ異常終了します。原因はシステムでd-busサービスがはしって
+いないためです。
+
+対策として以下のコマンドを実行するとDRAWIOファイルを変換できるようになります。
+
+\begin{lstlisting}
+  sudo /etc/init.d/dbus start
+  
+\end{lstlisting}
+
+\section{索引が空だと異常終了する}
+索引を作成するにはpreamble.texで宣言している\lstinline{\term}マクロを使用します。
+
+このマクロはきちんと動作しますが、文書を通して索引に使う用語が
+一つもない場合には、\LaTeX\ がドキュメントを生成せず異常終了します。
+
+対策として最低でも一つ用語を索引に入れるか、\lstinline{\printindex}による
+索引をやめてください。

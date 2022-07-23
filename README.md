@@ -10,4 +10,6 @@ A Latex Environment : Script and document to create the Latex environment for WS
 WSL上のUbuntuにはD-BUSサービスが起動しない問題があります。この問題が発生すると、DRAWIOファイルをPDFに変換することが出来ません。
 解決するには事前に以下のコマンドを実行してD-BUSサービスを
 起動しておいてください。
-sudo /etc/init.d/dbus startv
+```
+sudo /etc/init.d/dbus start
+```
