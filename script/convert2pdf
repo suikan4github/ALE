@@ -1,9 +1,12 @@
-#/bin/sh
+#/bin/bash
 
 # This command should be called from the project route ( where image, script exist )
 
-if [ ! -e {image} ]; then
-  mkdir image
+# Create image directory if it doesn't exsit
+IMAGEDIR=image
+
+if [ ! -d ${IMAGEDIR} ]; then
+  mkdir ${IMAGEDIR}
 fi
 
 # Convert jpeg/png/gif/drawio file to the PDF file
