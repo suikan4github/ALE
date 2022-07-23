@@ -1,14 +1,16 @@
 #! /bin/sh
 
-# Ubuntu 22.04 へのTexLiveのインストールスクリプト。
+# Install script of Latex environmente. Tested on Ubuntu 22.04 LTS
 
-# 作業用のディレクトリを作る
+# Create working directory for installing. 
 pushd .
 mkdir temp
 cd temp
 
-# 基本的なツール類のインストール
+# Foundemental tools installation
 sudo apt-get install -y git ca-certificates build-essential parallel
+sudo cpan YAML::Tiny
+sudo cpan File::HomeDir
 
 # Draw IO（ドローイングプログラム）の取得とインストール
 wget https://github.com/jgraph/drawio-desktop/releases/download/v19.0.3/drawio-amd64-19.0.3.deb
@@ -69,6 +71,6 @@ if ($^O eq 'linux') {
 $clean_full_ext = "%R.synctex.gz"
 EOF
 
-# 作業用のディレクトリから抜ける
+# Leave the working directory and delete it. 
 popd
 rm temp -rf
