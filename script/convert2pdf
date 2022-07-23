@@ -1,0 +1,12 @@
+#/bin/sh
+
+# Convert Draw.io file to the PDF file 
+
+# List all drawio file. 
+# Then, pass it to parallel.  {} : file path. {/.} : basename without extention.
+# The error messages are redirected to /dev/null
+ls image_src/*.drawio 2>/dev/null | parallel image_src/convert_drawio   {} image/{/.}.pdf
+
+# Convert jpeg/png/gif file to the PDF file
+# The error messages are redirected to /dev/null
+ls image_src/*.jpg image_src/*.png image_src/*.gif 2>/dev/null | parallel image_src/convert_picture   {} image/{/.}.pdf

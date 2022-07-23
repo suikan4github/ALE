@@ -2,6 +2,11 @@
 
 # Ubuntu 22.04 へのTexLiveのインストールスクリプト。
 
+# 作業用のディレクトリを作る
+pushd .
+mkdir temp
+cd temp
+
 # 基本的なツール類のインストール
 sudo apt-get install -y git ca-certificates build-essential parallel
 
@@ -63,3 +68,7 @@ if ($^O eq 'linux') {
 # clean up
 $clean_full_ext = "%R.synctex.gz"
 EOF
+
+# 作業用のディレクトリから抜ける
+popd
+rm temp -rf
