@@ -3,11 +3,16 @@
 # Ubuntu 22.04 へのTexLiveのインストールスクリプト。
 
 # 基本的なツール類のインストール
-sudo apt-get install -y git ca-certificates build-essential 
-
+sudo apt-get install -y git ca-certificates build-essential parallel
 
 # Draw IO（ドローイングプログラム）の取得とインストール
 wget https://github.com/jgraph/drawio-desktop/releases/download/v19.0.3/drawio-amd64-19.0.3.deb
 sudo apt-get -y install sqlite libgtk-3-0 libgbm1 libasound2 curl
 curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep '\.deb' | cut -d '"' -f 4 | wget -i -
+sudo apt -f install ./drawio-amd64-*.deb
 
+# Install ImageMagick
+sudo apt-get install -y imagemagick 
+# Allowing to generate the PDF. 
+# delete the PDF policy line from the /etc/ImageMagic*/policy.xml
+find /etc/ImageMagic*/policy.xml | xargs sudo sed -i /^.*pattern=\"PDF\".*$/d 
