@@ -43,8 +43,42 @@ Visual Sutdio Codeはフォルダのファイル一覧を表示してくれる�
 インストール方法については[INSTALL.md](INSTALL.md)を参照してください。
 
 注意：InstallスクリプトはImageMagickのポリシー・ファイルを変更し、PDFファイルを生成できるようにします。
-## LaTeXプロジェクトの構造
+
+## プロジェクトのディレクトリ構造
+ALEプロジェクトのディレクトリ構造は以下の通りです。
+
+```
+ALE
+├── FILES.md                : LaTeXプロジェクトのディレクトリ構造の解説
+├── install                 : ALEのインストール・スクリプト
+├── INSTALL.md              : ALEのインストールの解説
+├── LICENSE                 : ライセンス条件
+├── README.md               : 今読んでいるファイル
+└── sample                  : ALEを使うLaTeX文書プロジェクトの例
+    ├── 000_preface.tex
+    ├── 010_body.tex
+    ├── a10_appendix.tex
+    ├── b10_authers_note.tex
+    ├── image
+    ├── image_src
+    │   ├── diagram.drawio
+    │   ├── IMGP3933.pdf
+    │   ├── IMGP3954.jpg
+    │   ├── paint1.png
+    │   └── paint2.gif
+    ├── .latexmkrc
+    ├── out
+    ├── preamble.tex
+    ├── sample.bib
+    ├── sample.tex
+    └── script
+        ├── convert2pdf
+        └── process_of_conversion
+```
+
 LaTeXプロジェクトの構造に関しては[FILES.md](FILES.md)を参照してください。
+
+
 ## 既知の問題
 ### WSLでDRAWIOファイルの変換に失敗する
 この問題はWSL上のUbuntuで発生します。
