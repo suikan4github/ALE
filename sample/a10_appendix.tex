@@ -1,28 +1,28 @@
 \chapter{既知の問題}
 \label{sec:appendix10}
 
-\section{DRAWIOファイルをPDFに変換できない(1)}
-WSL環境ではDRAWIOファイルをPDFに変換できません。
+\section{draw.ioファイルをPDFに変換できない(1)}
+WSL環境ではdraw.ioファイルをPDFに変換できません。
 
-DRAWIOファイルの変換にはdrawioプログラムを使用していますが、この変換
+draw.ioファイルの変換にはdrawioプログラムを使用していますが、この変換
 がWSLでのみ異常終了します。原因はシステムでd-busサービスがはしって
 いないためです。
 
-対策として以下のコマンドを実行するとDRAWIOファイルを変換できるようになります。
+対策として以下のコマンドを実行するとdraw.ioファイルを変換できるようになります。
 
 \begin{lstlisting}
   sudo /etc/init.d/dbus start
   
 \end{lstlisting}
 
-\section{DRAWIOファイルをPDFに変換できない(2)}
+\section{draw.ioファイルをPDFに変換できない(2)}
 \LaTeX\ Workshopを使って文書を自動コンパイルする場合、
-DRAWIOファイルがPDFに変換されません。
+draw.ioファイルがPDFに変換されません。
 
 この問題はVS CODEがELECTRONアプリケーションを実行する
 やりかたによるものと思われます~\cite{ELECTRON_RUN_AS_NODE}。
 
-DRAWIOを利用しない文書はこの問題の影響をうけません。DRAWIOによる
+draw.ioを利用しない文書はこの問題の影響をうけません。draw.ioによる
 図形を使用する場合は、あらかじめ手動でscript/convert2pdfを実行して
 ください。
 

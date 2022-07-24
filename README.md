@@ -16,7 +16,7 @@ ALEは環境の手軽な設定と、画像をLaTeX文書を使うためのスク
 - PNG
 - GIF
 - JPEG
-- DRAWIO
+- draw.io
 
 PDF以外の画像はスクリプトによってPDFに変換されます。変換はマルチプロセスで行いますので、大量の画像データがある場合もマルチコア・プロセッサを利用して手早く変換をすることが出来ます。
 
@@ -80,25 +80,25 @@ LaTeXプロジェクトの構造に関しては[FILES.md](FILES.md)を参照し�
 ## 既知の問題
 [CHANGELOG](CHANGELOG.md)も参照してください。
 
-### WSLでDRAWIOファイルの変換に失敗する
+### WSLでdraw.ioファイルの変換に失敗する
 この問題はWSL上のUbuntuで発生します。
 非WSLのUbuntu Desktop環境では発生しません。
 
-WSL上のUbuntuにはD-BUSサービスが起動しない問題があります。この問題のためDRAWIOファイルをPDFに変換することが出来ません。
+WSL上のUbuntuにはD-BUSサービスが起動しない問題があります。この問題のためdraw.ioファイルをPDFに変換することが出来ません。
 解決するには事前に以下のコマンドを実行してD-BUSサービスを
 起動しておいてください。
 ```
 sudo /etc/init.d/dbus start
 ```
 
-### LaTeXワークショップによるビルドでDRAWIOファイルの変換に失敗する
+### LaTeXワークショップによるビルドでdraw.ioファイルの変換に失敗する
 この問題はLaTeXワークショップによる自動ビルド時に発生します。
 コマンドラインからのscript/convert2pdfスクリプトの実行では発生しません。
 
 おそらくは[Visual Stuido CodeによるElectronアプリケーションの起動方法](https://github.com/microsoft/vscode-cmake-tools/issues/1545)が理由で発生しています。
 
-DRAWIOファイルを使わない文書には影響はありません。
-DRAWIOファイルを使う文書では、事前にscript/convert2pdfスクリプトをコマンドラインで実行してファイルを変換してください。
+draw.ioファイルを使わない文書には影響はありません。
+draw.ioファイルを使う文書では、事前にscript/convert2pdfスクリプトをコマンドラインで実行してファイルを変換してください。
 
 ### 索引が空の場合にLaTeXのビルドが異常終了する
 ビルドするLaTeX文書において索引ページが空の場合はLaTeXのビルドに失敗します。

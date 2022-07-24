@@ -142,6 +142,6 @@ scriptディレクトリにはファイル変換を行うスクリプトが納�
 scirpt/convert2pdf
 ```
 
-image_srcディレクトリは名前の通り、LaTeX文書に挿入する画像のソースを置きます。ここには、GIF, PND, JPEG, PDF, DRAWIOファイルを置くことが出来ます。ALEはビルド中に文書ルート直下にimageディレクトリを作り、image_srcの画像ファイルから生成したPDFファイルを置きます。
+image_srcディレクトリは名前の通り、LaTeX文書に挿入する画像のソースを置きます。ここには、GIF, PND, JPEG, PDF, draw.ioファイルを置くことが出来ます。ALEはビルド中に文書ルート直下にimageディレクトリを作り、image_srcの画像ファイルから生成したPDFファイルを置きます。
 
 文書ディレクトリの構造については[FILES.md](FILES.md)も参考にしてください。

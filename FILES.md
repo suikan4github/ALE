@@ -15,7 +15,7 @@ ALEのサンプルLaTeX文書プロジェクトのディレクトリ構造は以
     ├── b10_authers_note.tex        : TeXソース「あとがき」。
     ├── image                       : ALEが変換した画像ファイルを出力するディレクトリ。
     ├── image_src                   : 文書で使用する画像ファイルのソース・ファイルを納める。
-    │   ├── diagram.drawio          : DRAWIOファイルの例。
+    │   ├── diagram.drawio          : draw.ioファイルの例。
     │   ├── IMGP3933.pdf            : PDFファイルの例。
     │   ├── IMGP3954.jpg            : JPEGファイルの例。
     │   ├── paint1.png              : PNGファイルの例。
