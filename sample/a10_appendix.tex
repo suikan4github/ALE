@@ -1,0 +1,37 @@
+\chapter{既知の問題}
+\label{sec:appendix10}
+
+\section{draw.ioファイルをPDFに変換できない(1)}
+WSL環境ではdraw.ioファイルをPDFに変換できません。
+
+draw.ioファイルの変換にはdrawioプログラムを使用していますが、この変換
+がWSLでのみ異常終了します。原因はシステムでd-busサービスがはしって
+いないためです。
+
+対策として以下のコマンドを実行するとdraw.ioファイルを変換できるようになります。
+
+\begin{lstlisting}
+  sudo /etc/init.d/dbus start
+  
+\end{lstlisting}
+
+\section{draw.ioファイルをPDFに変換できない(2)}
+\LaTeX\ Workshopを使って文書を自動コンパイルする場合、
+draw.ioファイルがPDFに変換されません。
+
+この問題はVS CODEがELECTRONアプリケーションを実行する
+やりかたによるものと思われます~\cite{ELECTRON_RUN_AS_NODE}。
+
+draw.ioを利用しない文書はこの問題の影響をうけません。draw.ioによる
+図形を使用する場合は、あらかじめ手動でscript/convert2pdfを実行して
+ください。
+
+\section{索引が空だと異常終了する}
+索引を作成するにはpreamble.texで宣言している\lstinline{\term}マクロを使用します。
+
+このマクロはきちんと動作しますが、文書を通して索引に使う用語が
+一つもない場合には、\LaTeX\ がドキュメントを生成せず異常終了します。
+
+対策として最低でも一つ用語を索引に入れるか、\lstinline{\printindex}による
+索引をやめてください。
+

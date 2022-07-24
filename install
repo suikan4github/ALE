@@ -1,0 +1,76 @@
+#! /bin/bash
+
+# Install script of Latex environmente. Tested on Ubuntu 22.04 LTS
+
+# Create working directory for installing. 
+pushd .
+mkdir temp
+cd temp
+
+# Foundemental tools installation
+sudo apt-get install -y git ca-certificates build-essential parallel
+sudo cpan YAML::Tiny
+sudo cpan File::HomeDir
+
+# Draw IO（ドローイングプログラム）の取得とインストール
+wget https://github.com/jgraph/drawio-desktop/releases/download/v19.0.3/drawio-amd64-19.0.3.deb
+sudo apt-get -y install sqlite libgtk-3-0 libgbm1 libasound2 curl
+curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep '\.deb' | cut -d '"' -f 4 | wget -i -
+sudo apt -f install -y ./drawio-amd64-*.deb
+
+# Install ImageMagick
+sudo apt-get install -y imagemagick 
+# Allowing to generate the PDF. 
+# delete the PDF policy line from the /etc/ImageMagic*/policy.xml
+find /etc/ImageMagic*/policy.xml | xargs sudo sed -i /^.*pattern=\"PDF\".*$/d 
+
+
+# Install TeX Live
+wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+tar xvf install-tl-unx.tar.gz
+cd install-tl-2*
+sudo ./install-tl -no-gui -repository http://mirror.ctan.org/systems/texlive/tlnet/
+# Adding path of TeX
+sudo /usr/local/texlive/????/bin/*/tlmgr path add
+
+# By placing the following code in the ~/latexmkrc, TeX file is compiled 
+# for each time the file is saved.
+# The code below was copied from https://qiita.com/rainbartown/items/d7718f12d71e688f3573  
+cat - << 'EOF' > ~/.latexmkrc
+#!/usr/bin/env perl
+
+# LaTeX
+$latex = 'platex -synctex=1 -halt-on-error -file-line-error %O %S';
+$max_repeat = 5;
+
+# BibTeX
+$bibtex = 'pbibtex %O %S';
+$biber = 'biber --bblencoding=utf8 -u -U --output_safechars %O %S';
+
+# index
+$makeindex = 'mendex %O -o %D %S';
+
+# DVI / PDF
+$dvipdf = 'dvipdfmx %O -o %D %S';
+$pdf_mode = 3;
+
+# preview
+$pvc_view_file_via_temporary = 0;
+if ($^O eq 'linux') {
+    $dvi_previewer = "xdg-open %S";
+    $pdf_previewer = "xdg-open %S";
+} elsif ($^O eq 'darwin') {
+    $dvi_previewer = "open %S";
+    $pdf_previewer = "open %S";
+} else {
+    $dvi_previewer = "start %S";
+    $pdf_previewer = "start %S";
+}
+
+# clean up
+$clean_full_ext = "%R.synctex.gz"
+EOF
+
+# Leave the working directory and delete it. 
+popd
+rm temp -rf

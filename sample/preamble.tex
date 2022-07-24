@@ -1,0 +1,61 @@
+% 図形を読み込めるようにする
+\usepackage[dvipdfmx]{graphicx}
+
+% 回り込み図形を使う
+\usepackage{wrapfig}
+
+% 図の配置を指定する
+\usepackage{here}
+
+% リスティングの設定
+% \begin{lstlisting}[caption=foo, label=bar]　のように使う。
+\usepackage{listings}
+\lstset{
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tlRB},
+  breaklines=true,
+  columns=fixed,
+  basewidth=0.5em,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  keepspaces=true,
+  lineskip=-0.5ex
+}
+
+% 索引を作る
+\usepackage{makeidx}
+\makeindex
+\usepackage[totoc]{idxlayout}
+
+% TODOを入れる
+\usepackage{todonotes}
+
+
+% PDF内部にハイパーリンクをつける
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper}
+\hypersetup{% hyperrefオプションリスト
+  setpagesize=false,
+  bookmarksnumbered=true,%
+  bookmarksopen=true,%
+  colorlinks=true,%
+  allcolors=blue
+}
+
+% 重要用語コマンド
+% フォントを変え、かつ索引に登録する
+
+\newcommand*{\term}[2][]{%
+  {\sffamily\bfseries #2}%
+  \ifx\relax#1\relax\index{#2}\else\index{#1@#2}\fi }
+
+% テーブルフォーマット
+\usepackage{booktabs}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}

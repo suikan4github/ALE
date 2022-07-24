@@ -1,0 +1,42 @@
+\documentclass[b5paper,11pt]{jsbook}
+
+\input{preamble.tex}
+
+
+% 書誌情報
+\title{PaleALE : A \LaTeX\ Environmentサンプル文書}
+\author{何某}
+\date{\today}
+
+% 本文
+\begin{document}
+\maketitle
+
+% はじめに
+\input{000_preface.tex}
+
+% 目次
+\tableofcontents
+\addcontentsline{toc}{chapter}{目次}
+
+\input{010_body.tex}
+
+\appendix
+\input{a10_appendix.tex}
+
+% 参考文献
+\bibliographystyle{jplain}
+\bibliography{sample}
+
+% 索引
+\printindex
+
+% 筆者あとがき
+\input{b10_authers_note.tex}
+
+% TODO
+\listoftodos
+\addcontentsline{toc}{chapter}{To Do}
+
+
+\end{document}

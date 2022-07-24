@@ -1,0 +1,28 @@
+\chapter*{はじめに}
+\label{sec:preface}
+\addcontentsline{toc}{chapter}{はじめに}
+
+PaleALE ( Pale - A \LaTeX\ Environment )は、Linux上で\term{Visual Studio Code}を用いて\LaTeX\ 執筆環境を
+整えるためのスクリプトおよびサンプルプロジェクトです。
+
+PaleALEを使うことで、以下のようなプラットフォームに\LaTeX\ 処理環境を作ることが出来ます。
+\begin{itemize}
+  \item Ubuntuデスクトップ
+  \item WSL上のUbuntuデスクトップ
+\end{itemize}
+後者の場合、Visual Studio CodeはWindows上で動きます。いずれの場合もLaTeXの処理はLinux上で行い、
+編集及び生成したPDFの表示は\term{\LaTeX\ Workshop}の助けを借りてVisual Studio Code上に表示します。
+
+また、PaleALEでは以下の形式の図形を文書中に取り込むことが出来ます。
+\begin{itemize}
+  \item PDF
+  \item JPEG
+  \item PNG
+  \item GIF
+\end{itemize}
+このうち、PDF形式以外のファイルは\LaTeX\ の処理に先立ちPDFに自動変換されて文書に取り込まれます。
+
+
+なお、本プロジェクトの開発にあたっては、多くのコードを「VSCodeで最高のLaTeX環境を作る」
+~\cite{best_latex_env}
+に負っています。
