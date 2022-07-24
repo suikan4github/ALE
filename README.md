@@ -29,7 +29,11 @@ ALEのスクリプトは以下の環境で試験しています。
 - Ubuntu 22.04 LTS on WSL + Visual Studio Code on Windows 11. 
 
 ## 使い方
-インストールが完了すると、LaTeX文書のソース(.tex)を開いた状態で以下のショートカットを利用できます。
+LaTeXの執筆を行うには、[LaTeX文書のプロジェクト](FILES.md)をVisual Studio Codeで開きます(メニューバー→[File]→[Open Folder ...])。
+
+Visual Sutdio Codeはフォルダのファイル一覧を表示してくれるので、好きなファイルを自由に開くことが出来ます。
+
+そしてLaTeX文書のソース・ファイル(.tex)を開いた状態で以下のショートカットを利用できます。
 - Alt-Ctrl-B : LaTeX文書のビルド
 - Alt-Ctrl-V : 生成したPDFのプレビュー
 
@@ -37,6 +41,8 @@ ALEのスクリプトは以下の環境で試験しています。
 
 ## インストール方法
 インストール方法については[INSTALL.md](INSTALL.md)を参照してください。
+
+注意：InstallスクリプトはImageMagickのポリシー・ファイルを変更し、PDFファイルを生成できるようにします。
 ## LaTeXプロジェクトの構造
 LaTeXプロジェクトの構造に関しては[FILES.md](FILES.md)を参照してください。
 ## 既知の問題
@@ -72,4 +78,11 @@ LaTeXはビルド中に異常終了します。
 \printindexによる索引ページを削除してもよいです。
 
 ## ライセンス
-本プロジェクトは[MITライセンス](LICENSE)に基づいて配布しています。
+本プロジェクトは以下の例外を除いて[MITライセンス](LICENSE)に基づいて配布しています。
+- .latexmkrcは[VSCode で最高の LaTeX 環境を作る](https://qiita.com/rainbartown/items/d7718f12d71e688f3573)で公開されているものです。
+- LaTeX Workshopの設定ファイルは[VSCode で最高の LaTeX 環境を作る](https://qiita.com/rainbartown/items/d7718f12d71e688f3573)で公開されているものを改造しています。
+
+## 本プロジェクトへの寄与について
+バグはgithub issueを使って報告して下さい。
+
+Pull Requestを受理した場合、上記ライセンスに従って公開されます。
