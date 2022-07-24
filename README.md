@@ -78,6 +78,8 @@ LaTeXプロジェクトの構造に関しては[FILES.md](FILES.md)を参照し�
 
 
 ## 既知の問題
+[CHANGELOG](CHANGELOG.md)も参照してください。
+
 ### WSLでDRAWIOファイルの変換に失敗する
 この問題はWSL上のUbuntuで発生します。
 非WSLのUbuntu Desktop環境では発生しません。
@@ -98,7 +100,7 @@ sudo /etc/init.d/dbus start
 DRAWIOファイルを使わない文書には影響はありません。
 DRAWIOファイルを使う文書では、事前にscript/convert2pdfスクリプトをコマンドラインで実行してファイルを変換してください。
 
-### 索引が空の場合にビルドが異常終了する
+### 索引が空の場合にLaTeXのビルドが異常終了する
 ビルドするLaTeX文書において索引ページが空の場合はLaTeXのビルドに失敗します。
 
 索引ページは\printindexおよびpreamble.texで宣言している\termマクロを
