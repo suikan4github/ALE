@@ -1,17 +1,17 @@
-# ALE
-ALE : A LaTeX Environmentは、Visual Studio Codeエディタを使う
+# PaleALE
+PaleALE : Pale - A Latex Environmentは、Visual Studio Codeエディタを使う
 LaTeX執筆環境の構築用スクリプト、ツール、およびサンプルLaTeX文書の
 コレクションです
 ## 概要
-ALEプロジェクトの目的は二つあります。
+PaleALEプロジェクトの目的は二つあります。
 - Visual Sudio CodeによるLaTeX執筆環境を作るためのインストール・スクリプトを提供する
 - 同環境での執筆のためのツールを提供する
 
-ALEが構築する執筆環境はVisual Studio Codeと、その上で動作するLaTeX Workshopプラグインを用いたものです。LaTeX Workshopを使うことで、LaTeXファイルを保存するたびにビルドが自動的に行われ、Visual Studio Code上で即座に生成したPDFファイルが自動的に表示されます。執筆者はビルドのたびにコマンドを叩く必要はありません。
+PaleALEが構築する執筆環境はVisual Studio Codeと、その上で動作するLaTeX Workshopプラグインを用いたものです。LaTeX Workshopを使うことで、LaTeXファイルを保存するたびにビルドが自動的に行われ、Visual Studio Code上で即座に生成したPDFファイルが自動的に表示されます。執筆者はビルドのたびにコマンドを叩く必要はありません。
 
 LaTeXは美しい文書を作ることが出来るツールですが、文献の整理や画像の挿入といった事を始めると、非常に多くのツールとの連携が必要になってきます。これらのツールを使う環境の準備や、手作業によるツールの起動を行っていては執筆に集中できません。
 
-ALEは環境の手軽な設定と、画像をLaTeX文書を使うためのスクリプトを提供します。具体的にはスクリプトを使うことで以下の画像形式をLaTeX上でPDFとして利用できるようになります。
+PaleALEは環境の手軽な設定と、画像をLaTeX文書を使うためのスクリプトを提供します。具体的にはスクリプトを使うことで以下の画像形式をLaTeX上でPDFとして利用できるようになります。
 - PDF
 - PNG
 - GIF
@@ -24,7 +24,7 @@ PDF以外の画像はスクリプトによってPDFに変換されます。変�
 
 ## 試験環境
 
-ALEのスクリプトは以下の環境で試験しています。
+PaleALEのスクリプトは以下の環境で試験しています。
 - Visual Studio Code on Ubuntu 22.04 LTS
 - Ubuntu 22.04 LTS on WSL + Visual Studio Code on Windows 11
 
@@ -43,16 +43,16 @@ LaTeX文書のソース・ファイル(.tex)を開いた状態で以下のショ
 注意：InstallスクリプトはImageMagickのポリシー・ファイルを変更し、PDFファイルを生成できるようにします。
 
 ## プロジェクトのディレクトリ構造
-ALEプロジェクトのディレクトリ構造は以下の通りです。
+PaleALEプロジェクトのディレクトリ構造は以下の通りです。
 
 ```
-ALE
+PaleALE
 ├── FILES.md                : LaTeXプロジェクトのディレクトリ構造の解説
-├── install                 : ALEのインストール・スクリプト
-├── INSTALL.md              : ALEのインストールの解説
+├── install                 : PaleALEのインストール・スクリプト
+├── INSTALL.md              : PaleALEのインストールの解説
 ├── LICENSE                 : ライセンス条件
 ├── README.md               : 今読んでいるファイル
-└── sample                  : ALEを使うLaTeX文書プロジェクトの例
+└── sample                  : PaleALEを使うLaTeX文書プロジェクトの例
     ├── 000_preface.tex
     ├── 010_body.tex
     ├── a10_appendix.tex

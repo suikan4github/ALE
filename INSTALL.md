@@ -1,18 +1,18 @@
-# ALEのインストール
+# PaleALEのインストール
 
-ALEのインストールは3つの手順を踏みます。
+PaleALEのインストールは3つの手順を踏みます。
 1. ツール類のインストール
 2. LaTeX Workshopのインストールと設定
 3. LaTeXプロジェクト構造の設定
 
 このうち、1と2はコンピュータ（あるいはユーザー・アカウント）に対して1度だけ行えば済みます。3はLaTeX文書プロジェクト（つまり論文や書籍）ごとに設定する必要があります。
 
-ALEはVisual Studio Codeをインストールしません。Visual Studio Codeは手作業でインストールしてください。
+PaleALEはVisual Studio Codeをインストールしません。Visual Studio Codeは手作業でインストールしてください。
 
 以下にこれらの作業について説明します。なお、Ubuntu / WSL / Visual Studio Codeのインストール方法及び一般的な使い方については説明しません。これらについては各種資料を参考にしてください。
 
 ## ツール類のインストール
-ツール類のインストールを行うには、ALEプロジェクトのルート・ディレクトリにあるinstallスクリプトを実行してください。引数は不要です。
+ツール類のインストールを行うには、PaleALEプロジェクトのルート・ディレクトリにあるinstallスクリプトを実行してください。引数は不要です。
 
 ```
 install
@@ -132,7 +132,7 @@ Settings.jsonを開いたら、以下のコードを追加してください。�
 2. 文書ルートにscriptディレクトリをコピーする
 3. 文書ルートにimage_srcディレクトリを作る
 
-.latexmkrcは、ALEが使用するlatexmkコマンドの設定ファイルです。このファイルは、TeXビルドの各パスで何をするかを指定しています。なお、.latexmkrcファイルは[VSCode で最高の LaTeX 環境を作る](https://qiita.com/rainbartown/items/d7718f12d71e688f3573)で公開されているものをそのまま使用しています。
+.latexmkrcは、PaleALEが使用するlatexmkコマンドの設定ファイルです。このファイルは、TeXビルドの各パスで何をするかを指定しています。なお、.latexmkrcファイルは[VSCode で最高の LaTeX 環境を作る](https://qiita.com/rainbartown/items/d7718f12d71e688f3573)で公開されているものをそのまま使用しています。
 
 .latexmkrcは文書ルートディレクトリのほか、ホームディレクトリにおいても構いません。
 
@@ -142,6 +142,6 @@ scriptディレクトリにはファイル変換を行うスクリプトが納�
 scirpt/convert2pdf
 ```
 
-image_srcディレクトリは名前の通り、LaTeX文書に挿入する画像のソースを置きます。ここには、GIF, PND, JPEG, PDF, draw.ioファイルを置くことが出来ます。ALEはビルド中に文書ルート直下にimageディレクトリを作り、image_srcの画像ファイルから生成したPDFファイルを置きます。
+image_srcディレクトリは名前の通り、LaTeX文書に挿入する画像のソースを置きます。ここには、GIF, PND, JPEG, PDF, draw.ioファイルを置くことが出来ます。PaleALEはビルド中に文書ルート直下にimageディレクトリを作り、image_srcの画像ファイルから生成したPDFファイルを置きます。
 
 文書ディレクトリの構造については[FILES.md](FILES.md)も参考にしてください。
