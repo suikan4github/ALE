@@ -13,7 +13,7 @@ ALEのサンプルLaTeX文書プロジェクトのディレクトリ構造は以
     ├── 010_body.tex                : TeXソース。本文。
     ├── a10_appendix.tex            : TeXソース「付録」。
     ├── b10_authers_note.tex        : TeXソース「あとがき」。
-    ├── image                       : ALEの作業用ディレクトリ。筆者は使わない。
+    ├── image                       : ALEが変換した画像ファイルを出力するディレクトリ。
     ├── image_src                   : 文書で使用する画像ファイルのソース・ファイルを納める。
     │   ├── diagram.drawio          : DRAWIOファイルの例。
     │   ├── IMGP3933.pdf            : PDFファイルの例。
