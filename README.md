@@ -25,8 +25,9 @@ PDF以外の画像はスクリプトによってPDFに変換されます。変�
 ## 試験環境
 
 PaleALEのスクリプトは以下の環境で試験しています。
-- Visual Studio Code on Ubuntu 22.04 LTS
-- Ubuntu 22.04 LTS on WSL + Visual Studio Code on Windows 11
+- Visual Studio Code on Ubuntu Desktop 22.04 LTS
+- Ubuntu Desktop 22.04 LTS on WSL + Visual Studio Code on Windows 11 (VS Code Remote connection)
+- Ubuntu Server 22.04 LTS on VMware + Visual Studio Code on Windows 11 (SSH connection)
 
 ## 使い方
 LaTeXの執筆を行うには、まず[LaTeX文書のプロジェクト](FILES.md)をVisual Studio Codeで開きます(メニューバー→[File]→[Open Folder ...])。この状態で編集を行います。Visual Sutdio Codeはフォルダのファイル一覧を表示してくれるので、好きなファイルを自由に開くことが出来ます。
