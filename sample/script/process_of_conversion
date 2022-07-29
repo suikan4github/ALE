@@ -10,7 +10,7 @@
 # if the source is younger than destination or destination doesn't exist
 if [ $1 -nt $2 ] || [ ! -e $2 ]; then  
     # Picture like jpg, png or gif? 
-    if [ "${1##*.}" = "jpg" ] || [ "${1##*.}" = "png" ] ||[ "${1##*.}" = "gif" ]; then
+    if [ "${1##*.}" = "jpg" ] || [ "${1##*.}" = "png" ] || [ "${1##*.}" = "gif" ]; then
         convert $1 $2  # Convert it 
     fi
 
@@ -18,7 +18,13 @@ if [ $1 -nt $2 ] || [ ! -e $2 ]; then
     # Crop the drawing with 10pt margin. 
     if [ "${1##*.}" = "drawio" ]; then
         echo "drawio -xf pdf --crop -b 10 -o" 1>&2
-        drawio -xf pdf --crop -b 10 -o  $2 $1 # Convert it
+        if [ "${XDG_SESSION_TYPE}" = "tty" ] ; then
+            # Create frame x frame buffer to run the drawio. Otherwise, it crashes.  
+            xvfb-run -a drawio -xf pdf --crop -b 10 -o  $2 $1 # Convert it
+        else
+            # In the GUI environment, we can just run the drawio. 
+            drawio -xf pdf --crop -b 10 -o  $2 $1 # Convert it
+        fi
     fi
 
     # Is PDF? 
