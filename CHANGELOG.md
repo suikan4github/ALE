@@ -8,6 +8,11 @@
 ### Deprecated
 ### Removed
 ### Fixed
+- [Issue #5](https://github.com/suikan4github/PaleALE/issues/5) : インストールの前に apt update && apt upgrade
+- [Issue #6](https://github.com/suikan4github/PaleALE/issues/6) : 不要なdebファイルのダウンロードをやめる
+- [Issue #7](https://github.com/suikan4github/PaleALE/issues/7) : Ubuntu serverでdrawioをpdfに変換できない。
+
+
 ### Security
 ### Known Issue
 - [Issue #1](https://github.com/suikan4github/PaleALE/issues/1) : WSL環境においてdraw.ioプログラムのコマンドライン実行に失敗する
