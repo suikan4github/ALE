@@ -8,6 +8,7 @@
 ### Deprecated
 ### Removed
 ### Fixed
+- [Issue #2](https://github.com/suikan4github/PaleALE/issues/2) : LaTeX Workshopからdraw.ioを呼び出すと実行に失敗する
 - [Issue #5](https://github.com/suikan4github/PaleALE/issues/5) : インストールの前に apt update && apt upgrade
 - [Issue #6](https://github.com/suikan4github/PaleALE/issues/6) : 不要なdebファイルのダウンロードをやめる
 - [Issue #7](https://github.com/suikan4github/PaleALE/issues/7) : Ubuntu serverでdrawioをpdfに変換できない。
