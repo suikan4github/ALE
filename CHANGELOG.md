@@ -2,7 +2,7 @@
 プロジェクトの開発と修正履歴
 
 ## [Unreleased]
-
+このバージョンからUbuntu Serverにも対応
 ### Added
 ### Changed
 ### Deprecated
