@@ -17,7 +17,6 @@
 ### Security
 ### Known Issue
 - [Issue #1](https://github.com/suikan4github/PaleALE/issues/1) : WSL環境においてdraw.ioプログラムのコマンドライン実行に失敗する
-- [Issue #2](https://github.com/suikan4github/PaleALE/issues/2) : LaTeX Workshopからdraw.ioを呼び出すと実行に失敗する
 - [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
 
 
