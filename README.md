@@ -25,8 +25,9 @@ PDF以外の画像はスクリプトによってPDFに変換されます。変�
 ## 試験環境
 
 PaleALEのスクリプトは以下の環境で試験しています。
-- Visual Studio Code on Ubuntu 22.04 LTS
-- Ubuntu 22.04 LTS on WSL + Visual Studio Code on Windows 11
+- Visual Studio Code on Ubuntu Desktop 22.04 LTS
+- Ubuntu Desktop 22.04 LTS on WSL + Visual Studio Code on Windows 11 (VS Code Remote connection)
+- Ubuntu Server 22.04 LTS on VMware + Visual Studio Code on Windows 11 (SSH connection)
 
 ## 使い方
 LaTeXの執筆を行うには、まず[LaTeX文書のプロジェクト](FILES.md)をVisual Studio Codeで開きます(メニューバー→[File]→[Open Folder ...])。この状態で編集を行います。Visual Sutdio Codeはフォルダのファイル一覧を表示してくれるので、好きなファイルを自由に開くことが出来ます。
@@ -90,15 +91,6 @@ WSL上のUbuntuにはD-BUSサービスが起動しない問題があります。
 ```
 sudo /etc/init.d/dbus start
 ```
-
-### LaTeXワークショップによるビルドでdraw.ioファイルの変換に失敗する
-この問題はLaTeXワークショップによる自動ビルド時に発生します。
-コマンドラインからのscript/convert2pdfスクリプトの実行では発生しません。
-
-おそらくは[Visual Stuido CodeによるElectronアプリケーションの起動方法](https://github.com/microsoft/vscode-cmake-tools/issues/1545)が理由で発生しています。
-
-draw.ioファイルを使わない文書には影響はありません。
-draw.ioファイルを使う文書では、事前にscript/convert2pdfスクリプトをコマンドラインで実行してファイルを変換してください。
 
 ### 索引が空の場合にLaTeXのビルドが異常終了する
 ビルドするLaTeX文書において索引ページが空の場合はLaTeXのビルドに失敗します。

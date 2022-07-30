@@ -8,12 +8,12 @@ mkdir temp
 cd temp
 
 # Foundemental tools installation
-sudo apt-get install -y git ca-certificates build-essential parallel
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install -y git ca-certificates build-essential parallel xvfb
 sudo cpan YAML::Tiny
 sudo cpan File::HomeDir
 
 # Draw IO（ドローイングプログラム）の取得とインストール
-wget https://github.com/jgraph/drawio-desktop/releases/download/v19.0.3/drawio-amd64-19.0.3.deb
 sudo apt-get -y install sqlite libgtk-3-0 libgbm1 libasound2 curl
 curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep '\.deb' | cut -d '"' -f 4 | wget -i -
 sudo apt -f install -y ./drawio-amd64-*.deb

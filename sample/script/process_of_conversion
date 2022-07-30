@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Convert jpeg/png/gif file to pdf only when the source is younger than destination
 
 # $0 : command scrift file name
@@ -10,15 +10,24 @@
 # if the source is younger than destination or destination doesn't exist
 if [ $1 -nt $2 ] || [ ! -e $2 ]; then  
     # Picture like jpg, png or gif? 
-    if [ "${1##*.}" = "jpg" ] || [ "${1##*.}" = "png" ] ||[ "${1##*.}" = "gif" ]; then
+    if [ "${1##*.}" = "jpg" ] || [ "${1##*.}" = "png" ] || [ "${1##*.}" = "gif" ]; then
         convert $1 $2  # Convert it 
     fi
 
     # Drawing by drawio? 
     # Crop the drawing with 10pt margin. 
     if [ "${1##*.}" = "drawio" ]; then
-        echo "drawio -xf pdf --crop -b 10 -o" 1>&2
-        drawio -xf pdf --crop -b 10 -o  $2 $1 # Convert it
+        # Delete ELECTRON_RUN_AS_NODE. This is set by VS CODE
+        # And known to make parameter passing bug. 
+        # To fix but, delete this env variable. 
+        export -n ELECTRON_RUN_AS_NODE
+        if [ "${XDG_SESSION_TYPE}" = "tty" ] ; then
+            # Create frame x frame buffer to run the drawio. Otherwise, it crashes.  
+            xvfb-run -a drawio -xf pdf --crop -b 10 -o  $2 $1 # Convert it
+        else
+            # In the GUI environment, we can just run the drawio. 
+            drawio -xf pdf --crop -b 10 -o  $2 $1 # Convert it
+        fi
     fi
 
     # Is PDF? 
