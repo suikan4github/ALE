@@ -2,6 +2,21 @@
 プロジェクトの開発と修正履歴
 
 ## [Unreleased]
+### Added
+- [Issue #11](https://github.com/suikan4github/PaleALE/issues/11) : Add assumed environment diagram
+
+
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+### Known Issue
+- [Issue #1](https://github.com/suikan4github/PaleALE/issues/1) : WSL環境においてdraw.ioプログラムのコマンドライン実行に失敗する
+- [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
+
+
+## [1.1.0]
 このバージョンからUbuntu Serverにも対応
 ### Added
 ### Changed
@@ -24,4 +39,5 @@
 最初のリリース
 
 [Unreleased]: https://github.com/suikan4github/murasaki/compare/v1.0.0...develop
+[1.1.0]: https://github.com/suikan4github/murasaki/compare/v1.0.0...develop
 [1.0.0]: https://github.com/suikan4github/murasaki/compare/v0.0.0...v1.0.0
