@@ -38,6 +38,6 @@
 ## [1.0.0] - 2022-07-24
 最初のリリース
 
-[Unreleased]: https://github.com/suikan4github/murasaki/compare/v1.1.0...develop
-[1.1.0]: https://github.com/suikan4github/murasaki/compare/v1.0.0...v1.1.0
-[1.0.0]: https://github.com/suikan4github/murasaki/compare/v0.0.0...v1.0.0
+[Unreleased]: https://github.com/suikan4github/PaleALE/compare/v1.1.0...develop
+[1.1.0]: https://github.com/suikan4github/PaleALE/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/suikan4github/PaleALE/compare/v0.0.0...v1.0.0
