@@ -11,7 +11,8 @@
 ### Removed
 ### Fixed
 - [Issue #9](https://github.com/suikan4github/PaleALE/issues/9) :  スクリプトをPosix準拠にする 
-- [Issue #9](https://github.com/suikan4github/PaleALE/issues/10) :  一次ディレクトリを/tmpに作る 
+- [Issue #10](https://github.com/suikan4github/PaleALE/issues/10) :  一次ディレクトリを/tmpに作る 
+- [Issue #13](https://github.com/suikan4github/PaleALE/issues/13) :  ~/.latexmkrcへの変更をやめる
 
 ### Security
 ### Known Issue
