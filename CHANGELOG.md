@@ -10,6 +10,8 @@
 ### Deprecated
 ### Removed
 ### Fixed
+- [Issue #9](https://github.com/suikan4github/PaleALE/issues/9) :  スクリプトをPosix準拠にする 
+
 ### Security
 ### Known Issue
 - [Issue #1](https://github.com/suikan4github/PaleALE/issues/1) : WSL環境においてdraw.ioプログラムのコマンドライン実行に失敗する
