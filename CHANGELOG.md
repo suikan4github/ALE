@@ -11,6 +11,7 @@
 ### Removed
 ### Fixed
 - [Issue #9](https://github.com/suikan4github/PaleALE/issues/9) :  スクリプトをPosix準拠にする 
+- [Issue #9](https://github.com/suikan4github/PaleALE/issues/10) :  一次ディレクトリを/tmpに作る 
 
 ### Security
 ### Known Issue
