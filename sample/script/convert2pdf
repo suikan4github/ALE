@@ -1,4 +1,4 @@
-#/bin/bash
+#/bin/sh
 
 # This command should be called from the project route ( where image, script exist )
 

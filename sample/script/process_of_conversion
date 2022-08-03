@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Convert jpeg/png/gif file to pdf only when the source is younger than destination
 
 # $0 : command scrift file name
@@ -20,7 +20,7 @@ if [ $1 -nt $2 ] || [ ! -e $2 ]; then
         # Delete ELECTRON_RUN_AS_NODE. This is set by VS CODE
         # And known to make parameter passing bug. 
         # To fix but, delete this env variable. 
-        export -n ELECTRON_RUN_AS_NODE
+        unset ELECTRON_RUN_AS_NODE
         if [ "${XDG_SESSION_TYPE}" = "tty" ] ; then
             # Create frame x frame buffer to run the drawio. Otherwise, it crashes.  
             xvfb-run -a drawio -xf pdf --crop -b 10 -o  $2 $1 # Convert it

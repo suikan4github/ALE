@@ -1,9 +1,8 @@
-#! /bin/bash
+#! /bin/sh
 
 # Install script of Latex environmente. Tested on Ubuntu 22.04 LTS
 
 # Create working directory for installing. 
-pushd .
 mkdir temp
 cd temp
 
@@ -72,5 +71,5 @@ $clean_full_ext = "%R.synctex.gz"
 EOF
 
 # Leave the working directory and delete it. 
-popd
+cd -
 rm temp -rf
