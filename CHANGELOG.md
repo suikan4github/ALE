@@ -1,7 +1,7 @@
 # Change log
 プロジェクトの開発と修正履歴
 
-## [Unreleased]
+## [Unreleased] yyyy-mm-zz
 ### Added
 ### Changed
 ### Deprecated
@@ -13,7 +13,7 @@
 - [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
 
 
-## [v1.1.1]
+## [v1.1.1] 2022-08-05
 ### Added
 - [Issue #11](https://github.com/suikan4github/PaleALE/issues/11) : Add assumed environment diagram
 
@@ -31,7 +31,7 @@
 - [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
 
 
-## [v1.1.0]
+## [v1.1.0] 2022-07-30
 このバージョンからUbuntu Serverにも対応
 ### Added
 ### Changed
