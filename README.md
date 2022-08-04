@@ -29,6 +29,10 @@ PaleALEのスクリプトは以下の環境で試験しています。
 - Ubuntu Desktop 22.04 LTS on WSL + Visual Studio Code on Windows 11 (VS Code Remote connection)
 - Ubuntu Server 22.04 LTS on VMware + Visual Studio Code on Windows 11 (SSH connection)
 
+<div align="center">
+<img src="image/env-a.png"  title="PaleALEが想定する環境">
+</div>
+
 ## 使い方
 LaTeXの執筆を行うには、まず[LaTeX文書のプロジェクト](FILES.md)をVisual Studio Codeで開きます(メニューバー→[File]→[Open Folder ...])。この状態で編集を行います。Visual Sutdio Codeはフォルダのファイル一覧を表示してくれるので、好きなファイルを自由に開くことが出来ます。
 
