@@ -95,7 +95,7 @@ WSL上のUbuntuにはD-BUSサービスが起動しない問題があります。
 ```
 sudo /etc/init.d/dbus start
 ```
-この問題は GH-1 として追跡されています。
+この問題は GitHub Issue [#1](https://github.com/suikan4github/PaleALE/issues/1) として追跡されています。
 
 ### 索引が空の場合にLaTeXのビルドが異常終了する
 ビルドするLaTeX文書において索引ページが空の場合はLaTeXのビルドに失敗します。
@@ -108,7 +108,7 @@ LaTeXはビルド中に異常終了します。
 \printindexによる索引ページを削除してもよいです。
 
 
-この問題は GH-3 として追跡されています。
+この問題は GitHub Issue [#3](https://github.com/suikan4github/PaleALE/issues/3) として追跡されています。
 
 ## ライセンス
 本プロジェクトは以下の例外を除いて[MITライセンス](LICENSE)に基づいて配布しています。
