@@ -26,8 +26,9 @@ PDF以外の画像はスクリプトによってPDFに変換されます。変�
 
 PaleALEのスクリプトは以下の環境で試験しています。
 - Visual Studio Code on Ubuntu Desktop 22.04 LTS
-- Ubuntu Desktop 22.04 LTS on WSL + Visual Studio Code on Windows 11 (VS Code Remote connection)
-- Ubuntu Server 22.04 LTS on VMware + Visual Studio Code on Windows 11 (SSH connection)
+- Ubuntu Desktop 22.04 LTS on WSL2 + Visual Studio Code on Windows 10 (VS Code Remote connection)
+- Ubuntu Desktop 22.04 LTS on WSL2 + Visual Studio Code on Windows 11 (VS Code Remote connection)
+- Ubuntu Server 22.04 LTS on VMware + Visual Studio Code on Windows 11 (VS Code SSH connection)
 
 <div align="center">
 <img src="image/env-a.png"  title="PaleALEが想定する環境">
@@ -95,6 +96,7 @@ WSL上のUbuntuにはD-BUSサービスが起動しない問題があります。
 ```
 sudo /etc/init.d/dbus start
 ```
+この問題は GitHub Issue [#1](https://github.com/suikan4github/PaleALE/issues/1) として追跡されています。
 
 ### 索引が空の場合にLaTeXのビルドが異常終了する
 ビルドするLaTeX文書において索引ページが空の場合はLaTeXのビルドに失敗します。
@@ -105,6 +107,9 @@ LaTeXはビルド中に異常終了します。
 
 この問題を解決するには最低一つの用語を索引に登録してください。あるいは
 \printindexによる索引ページを削除してもよいです。
+
+
+この問題は GitHub Issue [#3](https://github.com/suikan4github/PaleALE/issues/3) として追跡されています。
 
 ## ライセンス
 本プロジェクトは以下の例外を除いて[MITライセンス](LICENSE)に基づいて配布しています。

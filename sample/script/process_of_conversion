@@ -21,8 +21,10 @@ if [ $1 -nt $2 ] || [ ! -e $2 ]; then
         # And known to make parameter passing bug. 
         # To fix but, delete this env variable. 
         unset ELECTRON_RUN_AS_NODE
-        if [ "${XDG_SESSION_TYPE}" = "tty" ] ; then
-            # Create frame x frame buffer to run the drawio. Otherwise, it crashes.  
+        # Run drawio to convert the file. We must detect the GUI environment
+        if [ -n "${XDG_SESSION_TYPE}" ] || [ "${XDG_SESSION_TYPE}" != "tty" ] ; then
+            # Create frame x frame buffer to run the drawio for none GUI environment. 
+            # Otherwise, it crashes.  
             xvfb-run -a drawio -xf pdf --crop -b 10 -o  $2 $1 # Convert it
         else
             # In the GUI environment, we can just run the drawio. 
