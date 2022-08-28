@@ -26,8 +26,9 @@ PDF以外の画像はスクリプトによってPDFに変換されます。変�
 
 PaleALEのスクリプトは以下の環境で試験しています。
 - Visual Studio Code on Ubuntu Desktop 22.04 LTS
-- Ubuntu Desktop 22.04 LTS on WSL + Visual Studio Code on Windows 11 (VS Code Remote connection)
-- Ubuntu Server 22.04 LTS on VMware + Visual Studio Code on Windows 11 (SSH connection)
+- Ubuntu Desktop 22.04 LTS on WSL2 + Visual Studio Code on Windows 10 (VS Code Remote connection)
+- Ubuntu Desktop 22.04 LTS on WSL2 + Visual Studio Code on Windows 11 (VS Code Remote connection)
+- Ubuntu Server 22.04 LTS on VMware + Visual Studio Code on Windows 11 (VS Code SSH connection)
 
 <div align="center">
 <img src="image/env-a.png"  title="PaleALEが想定する環境">

@@ -7,6 +7,20 @@
 ### Deprecated
 ### Removed
 ### Fixed
+### Security
+### Known Issue
+- [Issue #1](https://github.com/suikan4github/PaleALE/issues/1) : WSL環境においてdraw.ioプログラムのコマンドライン実行に失敗する
+- [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
+
+
+## [v1.1.2] 2022-08-28
+Windows 10環境のWSLに対応した。
+
+### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
 - [Issue #15](https://github.com/suikan4github/PaleALE/issues/15) : Windows 10のWSL環境下でdrawioファイルをPDFに変換できない
 
 ### Security
@@ -55,7 +69,8 @@
 ## [1.0.0] - 2022-07-24
 最初のリリース
 
-[Unreleased]: https://github.com/suikan4github/PaleALE/compare/v1.1.1...develop
+[Unreleased]: https://github.com/suikan4github/PaleALE/compare/v1.1.2...develop
+[v1.1.2]: https://github.com/suikan4github/PaleALE/compare/v1.1.1...v1.1.2
 [v1.1.1]: https://github.com/suikan4github/PaleALE/compare/v1.1.0...v1.1.1
 [v1.1.0]: https://github.com/suikan4github/PaleALE/compare/v1.0.0...v1.1.0
 [v1.0.0]: https://github.com/suikan4github/PaleALE/compare/v0.0.0...v1.0.0
