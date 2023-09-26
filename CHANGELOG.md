@@ -2,6 +2,8 @@
 プロジェクトの開発と修正履歴
 
 ## [Unreleased] yyyy-mm-zz
+mdファイルのTypoを修正した。また [sample/preumble.tex](sample/preumble.tex) の /term マクロに
+分かりやすいコメントを加えた。
 ### Added
 ### Changed
 ### Deprecated

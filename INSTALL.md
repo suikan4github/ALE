@@ -15,7 +15,7 @@ PaleALEはVisual Studio Codeをインストールしません。Visual Studio Co
 ツール類のインストールを行うには、PaleALEプロジェクトのルート・ディレクトリにあるinstallスクリプトを実行してください。引数は不要です。
 
 ```
-install
+./install
 ```
 インストール・スクリプトは以下のツールと、その他必要なモジュールをインストールします。
 - TeX Live
@@ -40,7 +40,7 @@ LaTeX Workshop拡張機能のインストールに当たっては当然ながら
 
 LaTeX Workshopのインストール後、Visual Studio Codeのsetting.jsonを編集します。settings.jsonの開き方についてはネット上に多くの資料がありますのでそちらを参考にしてください。例えば[VS Codeのsettings.jsonの開き方](https://qiita.com/y-w/items/614843b259c04bb91495)が参考になるでしょう。
 
-Settings.jsonを開いたら、以下のコードを追加してください。なお、追加にあたってはJSON形式をある程度理解している必要があります。事前にならんかの試料を読んでおく事をお勧めします。
+Settings.jsonを開いたら、以下のコードを追加してください。なお、追加にあたってはJSON形式をある程度理解している必要があります。事前にならんかの資料を読んでおく事をお勧めします。
 
 大雑把に言えば、一番外側の"{"と"}"の中に以下のコードを埋め込みます。
 
@@ -139,7 +139,7 @@ Settings.jsonを開いたら、以下のコードを追加してください。�
 scriptディレクトリにはファイル変換を行うスクリプトが納められています。手作業で変換する場合は、文書ルートからコマンドラインで以下のスクリプトを実行してください。
 
 ```
-scirpt/convert2pdf
+./scirpt/convert2pdf
 ```
 
 image_srcディレクトリは名前の通り、LaTeX文書に挿入する画像のソースを置きます。ここには、GIF, PND, JPEG, PDF, draw.ioファイルを置くことが出来ます。PaleALEはビルド中に文書ルート直下にimageディレクトリを作り、image_srcの画像ファイルから生成したPDFファイルを置きます。
