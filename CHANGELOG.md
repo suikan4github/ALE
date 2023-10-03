@@ -10,6 +10,7 @@ mdファイルのTypoを修正した。また [sample/preumble.tex](sample/preum
 ### Removed
 ### Fixed
 - [Issue #17](https://github.com/suikan4github/PaleALE/issues/17) :  VS CodeのProblemsペーンにtexソースの問題個所が表示されない。 
+- [Issue #18](https://github.com/suikan4github/PaleALE/issues/18) :  convert2pdfコマンドの出力ディレクトリが決め打ち
 ### Security
 ### Known Issue
 - [Issue #1](https://github.com/suikan4github/PaleALE/issues/1) : WSL環境においてdraw.ioプログラムのコマンドライン実行に失敗する

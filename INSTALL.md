@@ -96,42 +96,48 @@ Settings.jsonを開いたら、以下のコードを追加してください。�
     ],
     // 生成ファイルを "out" ディレクトリに吐き出す
     "latex-workshop.latex.outDir": "out",
-    // ビルドのレシピ
+    // LaTeX Workshopに表示されるビルドのレシピ
     "latex-workshop.latex.recipes": [
         {
             "name": "latexmk",
             "tools": [
-                "convert2pdf",
-                "latexmk"
+                "convert2pdf-process",
+                "latexmk-process"
             ]
         },
     ],
-    // ビルドのレシピに使われるパーツ
+    // ビルドのレシピに使われるモジュール
     "latex-workshop.latex.tools": [
         {
-            "name": "latexmk",
+            "name": "latexmk-process",
             "command": "latexmk",
             "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
                 "-outdir=%OUTDIR%",
                 "%DOC%"
             ],
+            "env": {}
         },
         {
-            "name": "convert2pdf",
+            "name": "convert2pdf-process",
             "command": "script/convert2pdf",
+            "args": [
+                "%OUTDIR%"
+            ]
         },
-    ],
- 
+    ], 
 ```
 ## LaTeXプロジェクト構造の設定
-LaTeXプロジェクト構造は、論文や書籍ごとに設定しなければなりません。
+LaTeXプロジェクトの構造は、論文や書籍ごとに設定しなければなりません。
 
 必要な作業は以下の通りです。なお、この説明において「文書ルート」とはプロジェクトの最上位ディレクトリの事です。文書ルートにはLaTeXのソース・ファイルをおさめます。すなわち、*.texファイル起き場です。
 1. 文書ルートに.latexmkrcをコピーする
 2. 文書ルートにscriptディレクトリをコピーする
 3. 文書ルートにimage_srcディレクトリを作る
 
-.latexmkrcは、PaleALEが使用するlatexmkコマンドの設定ファイルです。このファイルは、TeXビルドの各パスで何をするかを指定しています。なお、.latexmkrcファイルは[VSCode で最高の LaTeX 環境を作る](https://qiita.com/rainbartown/items/d7718f12d71e688f3573)で公開されているものをそのまま使用しています。
+.latexmkrcは、PaleALEが使用するlatexmkコマンドの設定ファイルです。このファイルは、TeXビルドの各パスで何をするかを指定しています。なお、.latexmkrcファイルは[VSCode で最高の LaTeX 環境を作る](https://qiita.com/rainbartown/items/d7718f12d71e688f3573)で公開されているものを修正して使用しています。
 
 .latexmkrcは文書ルートディレクトリのほか、ホームディレクトリにおいても構いません。
 
