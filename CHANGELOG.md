@@ -9,6 +9,7 @@ mdファイルのTypoを修正した。また [sample/preumble.tex](sample/preum
 ### Deprecated
 ### Removed
 ### Fixed
+- [Issue #17](https://github.com/suikan4github/PaleALE/issues/17) :  VS CodeのProblemsペーンにtexソースの問題個所が表示されない。 
 ### Security
 ### Known Issue
 - [Issue #1](https://github.com/suikan4github/PaleALE/issues/1) : WSL環境においてdraw.ioプログラムのコマンドライン実行に失敗する
