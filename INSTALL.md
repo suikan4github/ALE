@@ -15,7 +15,7 @@ PaleALEはVisual Studio Codeをインストールしません。Visual Studio Co
 ツール類のインストールを行うには、PaleALEプロジェクトのルート・ディレクトリにあるinstallスクリプトを実行してください。引数は不要です。
 
 ```
-install
+./install
 ```
 インストール・スクリプトは以下のツールと、その他必要なモジュールをインストールします。
 - TeX Live
@@ -40,7 +40,7 @@ LaTeX Workshop拡張機能のインストールに当たっては当然ながら
 
 LaTeX Workshopのインストール後、Visual Studio Codeのsetting.jsonを編集します。settings.jsonの開き方についてはネット上に多くの資料がありますのでそちらを参考にしてください。例えば[VS Codeのsettings.jsonの開き方](https://qiita.com/y-w/items/614843b259c04bb91495)が参考になるでしょう。
 
-Settings.jsonを開いたら、以下のコードを追加してください。なお、追加にあたってはJSON形式をある程度理解している必要があります。事前にならんかの試料を読んでおく事をお勧めします。
+Settings.jsonを開いたら、以下のコードを追加してください。なお、追加にあたってはJSON形式をある程度理解している必要があります。事前にならんかの資料を読んでおく事をお勧めします。
 
 大雑把に言えば、一番外側の"{"と"}"の中に以下のコードを埋め込みます。
 
@@ -96,50 +96,55 @@ Settings.jsonを開いたら、以下のコードを追加してください。�
     ],
     // 生成ファイルを "out" ディレクトリに吐き出す
     "latex-workshop.latex.outDir": "out",
-    // ビルドのレシピ
+    // LaTeX Workshopに表示されるビルドのレシピ
     "latex-workshop.latex.recipes": [
         {
             "name": "latexmk",
             "tools": [
-                "convert2pdf",
-                "latexmk"
+                "convert2pdf-process",
+                "latexmk-process"
             ]
         },
     ],
-    // ビルドのレシピに使われるパーツ
+    // ビルドのレシピに使われるモジュール
     "latex-workshop.latex.tools": [
         {
-            "name": "latexmk",
+            "name": "latexmk-process",
             "command": "latexmk",
             "args": [
-                "-silent",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
                 "-outdir=%OUTDIR%",
                 "%DOC%"
             ],
+            "env": {}
         },
         {
-            "name": "convert2pdf",
+            "name": "convert2pdf-process",
             "command": "script/convert2pdf",
+            "args": [
+                "%OUTDIR%"
+            ]
         },
-    ],
- 
+    ], 
 ```
 ## LaTeXプロジェクト構造の設定
-これまでのインストールと設定はコンピュータ1台（あるいはユーザーアカウント1つ）につき一度だけ必要なものでした。LaTeXプロジェクト構造は、論文や書籍ごとに設定しなければなりません。
+LaTeXプロジェクトの構造は、論文や書籍ごとに設定しなければなりません。
 
 必要な作業は以下の通りです。なお、この説明において「文書ルート」とはプロジェクトの最上位ディレクトリの事です。文書ルートにはLaTeXのソース・ファイルをおさめます。すなわち、*.texファイル起き場です。
 1. 文書ルートに.latexmkrcをコピーする
 2. 文書ルートにscriptディレクトリをコピーする
 3. 文書ルートにimage_srcディレクトリを作る
 
-.latexmkrcは、PaleALEが使用するlatexmkコマンドの設定ファイルです。このファイルは、TeXビルドの各パスで何をするかを指定しています。なお、.latexmkrcファイルは[VSCode で最高の LaTeX 環境を作る](https://qiita.com/rainbartown/items/d7718f12d71e688f3573)で公開されているものをそのまま使用しています。
+.latexmkrcは、PaleALEが使用するlatexmkコマンドの設定ファイルです。このファイルは、TeXビルドの各パスで何をするかを指定しています。なお、.latexmkrcファイルは[VSCode で最高の LaTeX 環境を作る](https://qiita.com/rainbartown/items/d7718f12d71e688f3573)で公開されているものを修正して使用しています。
 
 .latexmkrcは文書ルートディレクトリのほか、ホームディレクトリにおいても構いません。
 
 scriptディレクトリにはファイル変換を行うスクリプトが納められています。手作業で変換する場合は、文書ルートからコマンドラインで以下のスクリプトを実行してください。
 
 ```
-scirpt/convert2pdf
+./scirpt/convert2pdf
 ```
 
 image_srcディレクトリは名前の通り、LaTeX文書に挿入する画像のソースを置きます。ここには、GIF, PND, JPEG, PDF, draw.ioファイルを置くことが出来ます。PaleALEはビルド中に文書ルート直下にimageディレクトリを作り、image_srcの画像ファイルから生成したPDFファイルを置きます。
