@@ -12,6 +12,19 @@
 - [Issue #1](https://github.com/suikan4github/PaleALE/issues/1) : WSL環境においてdraw.ioプログラムのコマンドライン実行に失敗する
 - [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
 
+
+## [v1.1.5] 2023-10-23
+sampleのスクリーンショットの解説で">"が文字化けしている問題を修正。
+### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+### Known Issue
+- [Issue #1](https://github.com/suikan4github/PaleALE/issues/1) : WSL環境においてdraw.ioプログラムのコマンドライン実行に失敗する
+- [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
+
 ## [v1.1.4] 2023-10-21
 sampleにスクリーンショットの例を追加した。100%, 200%, 400%スケールの例。
 ### Added
@@ -95,7 +108,8 @@ Windows 10環境のWSLに対応した。
 ## [1.0.0] - 2022-07-24
 最初のリリース
 
-[Unreleased]: https://github.com/suikan4github/PaleALE/compare/v1.1.4...develop
+[Unreleased]: https://github.com/suikan4github/PaleALE/compare/v1.1.5...develop
+[v1.1.5]: https://github.com/suikan4github/PaleALE/compare/v1.1.4...v1.1.5
 [v1.1.4]: https://github.com/suikan4github/PaleALE/compare/v1.1.3...v1.1.4
 [v1.1.3]: https://github.com/suikan4github/PaleALE/compare/v1.1.2...v1.1.3
 [v1.1.2]: https://github.com/suikan4github/PaleALE/compare/v1.1.1...v1.1.2
