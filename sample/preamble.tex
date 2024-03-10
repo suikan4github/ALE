@@ -62,3 +62,17 @@
 \usepackage{booktabs}
 \usepackage[normalem]{ulem}
 \useunder{\uline}{\ul}{}
+
+% キャプションフォーマットの退避
+\makeatletter
+\let\MYcaption\@makecaption
+\makeatother
+
+% サブキャプションを読み込む
+\usepackage{subcaption}
+\captionsetup{compatibility=false}      % 必要に応じて
+
+% キャプションフォーマットの復帰
+\makeatletter
+\let\@makecaption\MYcaption
+\makeatother
