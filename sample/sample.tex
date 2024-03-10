@@ -1,4 +1,4 @@
-\documentclass[b5paper,11pt]{jsbook}
+\documentclass[a4paper,11pt]{jsbook}
 
 \input{preamble.tex}
 
@@ -16,10 +16,12 @@
 \input{000_preface.tex}
 
 % 目次
+\setcounter{tocdepth}{2}
 \tableofcontents
 \addcontentsline{toc}{chapter}{目次}
 
-\input{010_body.tex}
+\input{010_screenshots.tex}
+\input{020_figures.tex}
 
 \appendix
 \input{a10_appendix.tex}

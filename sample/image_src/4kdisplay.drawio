@@ -1,0 +1,31 @@
+<mxfile host="65bd71144e">
+    <diagram id="NC1hEWJh8_QtpdpS8o8B" name="Page-1">
+        <mxGraphModel dx="571" dy="979" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="12" value="Windows PC" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=18;fillColor=#E6E6E6;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="90" width="260" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="4k" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=0;size=0.23;flipH=1;rotation=0;direction=north;fontSize=18;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="127.5" width="90" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="4k" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=18;size=0.22499999999999998;flipH=1;rotation=0;direction=south;fontSize=18;" vertex="1" parent="1">
+                    <mxGeometry x="405" y="127.5" width="90" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="320" y="177" as="sourcePoint"/>
+                        <mxPoint x="400" y="177" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="Display" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=2;fontSize=18;" vertex="1" parent="1">
+                    <mxGeometry x="420" y="227.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Frame Buffer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=2;fontSize=18;" vertex="1" parent="1">
+                    <mxGeometry x="95" y="227.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
