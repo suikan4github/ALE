@@ -8,7 +8,7 @@
 
 \section{スクリーンショットは何故汚いか}
 
-\begin{wrapfigure}{r}[0pt]{0.5\textwidth}
+\begin{wrapfigure}[11]{r}[0pt]{0.5\textwidth}
   \begin{center}
     \includegraphics*[width=50mm]{image/sc100.pdf}
     \caption{スクリーンショット} \label{fig:normal_ss}
@@ -26,14 +26,6 @@
 この際、なるべくきれいにスケーリングするアルゴリズムが選ばれてはいるものの、もともとの図形が細かい
 ため、どうしても細部が崩れてしまうのです。
 
-
-\begin{wrapfigure}{r}[0pt]{0.5\textwidth}
-  \begin{center}
-    \includegraphics*[width=50mm]{image/sc200.pdf}
-    \caption{スクリーンショット} \label{fig:beautiful_ss}
-  \end{center}
-\end{wrapfigure}
-
 では次に図\ref{fig:beautiful_ss}を見てください。図\ref{fig:normal_ss}に比べて
 格段に美しいスクリーンショットです。拡大すれば粗が見えるものの、画面で見るPDFの品質としては
 十分ではないでしょうか。
@@ -41,6 +33,15 @@
 図\ref{fig:beautiful_ss}が美しい秘密は、その大きさにあります。実は、このスクリーンショットは
 図\ref{fig:normal_ss}の倍のサイズで表示されたものを取得しているのです。つまり、長さ方向で
 倍の情報を持っているため、スケーリングするときに有利になるわけです。
+
+\begin{wrapfigure}[11]{r}[0pt]{0.5\textwidth}
+  \begin{center}
+    \includegraphics*[width=50mm]{image/sc200.pdf}
+    \caption{スクリーンショット} \label{fig:beautiful_ss}
+  \end{center}
+\end{wrapfigure}
+
+
 
 この例では200\%拡大のスクリーンショットですが、400\%拡大でスクリーンショットを撮れば
 印刷にも耐える品質になります。というわけで、大きなスクリーンショットをどうやって撮るか
@@ -52,7 +53,7 @@
 大きなスクリーンショットを撮る理屈は簡単です。画面拡大率を大きくしてスクリーンショットを
 撮ればよいのです。
 
-\begin{figure}[btp]
+\begin{figure}[bp]
   \begin{center}
     \includegraphics*[width=85mm]{image/system-display.pdf}
     \caption{Windowsの拡大縮小設定} \label{fig:system-display}
