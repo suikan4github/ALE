@@ -12,6 +12,19 @@
 - [Issue #1](https://github.com/suikan4github/PaleALE/issues/1) : WSL環境においてdraw.ioプログラムのコマンドライン実行に失敗する
 - [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
 
+## [v1.1.7] 2024-03-15
+HDMIプラグだけを使う方法を追加。文章の小修整。
+### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+### Known Issue
+- [Issue #1](https://github.com/suikan4github/PaleALE/issues/1) : WSL環境においてdraw.ioプログラムのコマンドライン実行に失敗する
+- [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
+
+
 ## [v1.1.6] 2024-03-10
 サンプル文書を更新。スクリーンショットの撮り方を独立した章にした。
 ### Added
@@ -120,7 +133,8 @@ Windows 10環境のWSLに対応した。
 ## [1.0.0] - 2022-07-24
 最初のリリース
 
-[Unreleased]: https://github.com/suikan4github/PaleALE/compare/v1.1.6...develop
+[Unreleased]: https://github.com/suikan4github/PaleALE/compare/v1.1.7...develop
+[v1.1.7]: https://github.com/suikan4github/PaleALE/compare/v1.1.6...v1.1.7
 [v1.1.6]: https://github.com/suikan4github/PaleALE/compare/v1.1.5...v1.1.6
 [v1.1.5]: https://github.com/suikan4github/PaleALE/compare/v1.1.4...v1.1.5
 [v1.1.4]: https://github.com/suikan4github/PaleALE/compare/v1.1.3...v1.1.4
