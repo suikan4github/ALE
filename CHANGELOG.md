@@ -4,6 +4,8 @@
 ## [Unreleased] yyyy-mm-zz
 ### Added
 ### Changed
+- [Issue #26](https://github.com/suikan4github/PaleALE/issues/26) : CPANではなくCPANMINUSを使う。
+
 ### Deprecated
 ### Removed
 ### Fixed
