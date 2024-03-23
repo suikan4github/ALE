@@ -1,6 +1,20 @@
 #! /bin/sh
 
 # Install script of Latex environmente. Tested on Ubuntu 22.04 LTS
+# Note : We support only x86_64 and aarch64
+
+# Check the architecture 
+    export CPU=$(arch)
+    # The $CPU must be x86_64 or aarch64
+    if $(echo $CPU | grep x86_64 > /dev/null); then
+        echo OK. We support x86_64. > /dev/null
+    elif $(echo $CPU | grep aarch64 > /dev/null); then
+        echo OK. We support aarch64. > /dev/null
+    else 
+        echo $CPU is not supported. 
+        exit 1
+    fi
+
 
 # Use subshell to encapsule the effect of umask
 (
@@ -26,12 +40,13 @@
     sudo apt-get -y install sqlite libgtk-3-0 libgbm1 libasound2 curl
     curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep '\.deb' | cut -d '"' -f 4 | wget -i -
 
-    if $(arch | grep x86_64 > /dev/null); then
+    if $(echo $CPU | grep x86_64 > /dev/null); then
         sudo apt -f install -y ./drawio-amd64-*.deb
-    elif $(arch | grep Aarch64 > /dev/null); then
+    elif $(echo $CPU | grep aarch64 > /dev/null); then
         sudo apt -f install -y ./drawio-arm64-*.deb
     else 
-        echo Program error of Draw.IO installation.
+        echo Program logic error at Draw.IO installation.
+        exit 1
     fi
 
     # Install ImageMagick
@@ -49,6 +64,6 @@
     # Adding path of TeX
     sudo /usr/local/texlive/????/bin/*/tlmgr path add
  
-   # Leave the working directory by existing subshell
+   # Leave the working directory by exiting subshell
 )
 
