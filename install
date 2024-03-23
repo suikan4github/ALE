@@ -25,7 +25,14 @@
     # Draw IO（ドローイングプログラム）の取得とインストール
     sudo apt-get -y install sqlite libgtk-3-0 libgbm1 libasound2 curl
     curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep '\.deb' | cut -d '"' -f 4 | wget -i -
-    sudo apt -f install -y ./drawio-amd64-*.deb
+
+    if $(arch | grep x86_64 > /dev/null); then
+        sudo apt -f install -y ./drawio-amd64-*.deb
+    elif $(arch | grep Aarch64 > /dev/null); then
+        sudo apt -f install -y ./drawio-arm64-*.deb
+    else 
+        echo Program error of Draw.IO installation.
+    fi
 
     # Install ImageMagick
     sudo apt-get install -y imagemagick 
