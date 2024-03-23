@@ -4,7 +4,8 @@
 ## [Unreleased] yyyy-mm-zz
 ### Added
 ### Changed
-- [Issue #26](https://github.com/suikan4github/PaleALE/issues/26) : CPANではなくCPANMINUSを使う。
+- [Issue #25](https://github.com/suikan4github/PaleALE/issues/25) : CPANのautoconfigurationへの応答を自動化する
+- [Issue #26](https://github.com/suikan4github/PaleALE/issues/26) : CPANではなくCPANMINUSを使う
 
 ### Deprecated
 ### Removed
