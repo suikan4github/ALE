@@ -42,6 +42,12 @@ PaleALEのスクリプトは以下の環境で試験しています。
 <img src="image/env-a.png"  title="PaleALEが想定する環境">
 </div>
 
+## リリース
+各バージョンの全ファイルとビルド済みサンプルPDFがリリースとして公開されています。プロジェクトページ右のリリースを参照してください。
+
+## 技術情報
+[PaleAle Wiki](https://github.com/suikan4github/PaleALE/wiki)はリリースとは独立した技術情報を公開しています。トラブルがあったときはWikiも参照してみてください。
+
 ## 使い方
 LaTeXの執筆を行うには、まず[LaTeX文書のプロジェクト](FILES.md)をVisual Studio Codeで開きます(メニューバー→[File]→[Open Folder ...])。この状態で編集を行います。Visual Sutdio Codeはフォルダのファイル一覧を表示してくれるので、好きなファイルを自由に開くことが出来ます。
 
