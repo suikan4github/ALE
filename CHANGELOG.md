@@ -4,7 +4,7 @@
 ## [Unreleased] yyyy-mm-zz
 ### Added
 ### Changed
-- [Issue #24](https://github.com/suikan4github/PaleALE/issues/24) :  AArch64に対応させる
+- [Issue #24](https://github.com/suikan4github/PaleALE/issues/24) : AArch64に対応させる
 - [Issue #25](https://github.com/suikan4github/PaleALE/issues/25) : CPANのautoconfigurationへの応答を自動化する
 - [Issue #26](https://github.com/suikan4github/PaleALE/issues/26) : CPANではなくCPANMINUSを使う
 
