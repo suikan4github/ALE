@@ -1,7 +1,12 @@
 # PaleALE
 PaleALE : Pale - A Latex Environmentは、Visual Studio Codeエディタを使う
-LaTeX執筆環境の構築用スクリプト、ツール、およびサンプルLaTeX文書の
-コレクションです。
+LaTeX執筆環境の構築用スクリプト、ツール、およびサンプルLaTeX文書のコレクションです。
+
+ターゲット環境は次の3種類です。
+- Ubuntu Desktop
+- Ubuntu Server
+- WSL (Ubuntu)
+
 ## 概要
 PaleALEプロジェクトの目的は二つあります。
 - Visual Sudio CodeによるLaTeX執筆環境を作るためのインストール・スクリプトを提供する
@@ -35,8 +40,9 @@ PaleALEのスクリプトは以下の環境で試験しています。
 - Ubuntu Desktop 22.04 LTS (x86_64) on WSL2 + VS Code on Windows 10 
 - Ubuntu Desktop 22.04 LTS (x86_64) on WSL2 + VS Code on Windows 11 
 - Ubuntu Server 22.04 LTS (x86_64) + VS Code on Windows 11 (remote SSH connection)
-- Ubuntu Server 22.04 LTS ( aarch64 ) + VS Code on Windows 11 (remote SSH connection)
+- Ubuntu Server 22.04 LTS (aarch64) + VS Code on Windows 11 (remote SSH connection)
 
+aarch64の試験は、Raspberry Pi 3A上のUbuntu Server 22.04で行いました。
 
 <div align="center">
 <img src="image/env-a.png"  title="PaleALEが想定する環境">
@@ -45,7 +51,7 @@ PaleALEのスクリプトは以下の環境で試験しています。
 ## リリース
 各バージョンの全ファイルとビルド済みサンプルPDFがリリースとして公開されています。プロジェクトページ右のリリースを参照してください。
 
-## 技術情報
+## Wiki
 [PaleAle Wiki](https://github.com/suikan4github/PaleALE/wiki)はリリースとは独立した技術情報を公開しています。トラブルがあったときはWikiも参照してみてください。
 
 ## 使い方
