@@ -9,7 +9,25 @@
 ### Fixed
 ### Security
 ### Known Issue
+- [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
+
+
+## [v1.2.0] 2024-03-25
+AArch64に対応。Raspberry Pi 3Aで試験。
+### Added
+### Changed
+- [Issue #24](https://github.com/suikan4github/PaleALE/issues/24) : AArch64に対応させる
+
+### Deprecated
+### Removed
+### Fixed
 - [Issue #1](https://github.com/suikan4github/PaleALE/issues/1) : WSL環境においてdraw.ioプログラムのコマンドライン実行に失敗する
+- [Issue #25](https://github.com/suikan4github/PaleALE/issues/25) : CPANのautoconfigurationへの応答を自動化する
+- [Issue #26](https://github.com/suikan4github/PaleALE/issues/26) : CPANではなくCPANMINUSを使う
+- [Issue #26](https://github.com/suikan4github/PaleALE/issues/27) : 並列実行によるCPU占有を防ぐ
+
+### Security
+### Known Issue
 - [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
 
 ## [v1.1.7] 2024-03-15
@@ -133,7 +151,8 @@ Windows 10環境のWSLに対応した。
 ## [1.0.0] - 2022-07-24
 最初のリリース
 
-[Unreleased]: https://github.com/suikan4github/PaleALE/compare/v1.1.7...develop
+[Unreleased]: https://github.com/suikan4github/PaleALE/compare/v1.2.0...develop
+[v1.2.0]: https://github.com/suikan4github/PaleALE/compare/v1.1.7...v1.2.0
 [v1.1.7]: https://github.com/suikan4github/PaleALE/compare/v1.1.6...v1.1.7
 [v1.1.6]: https://github.com/suikan4github/PaleALE/compare/v1.1.5...v1.1.6
 [v1.1.5]: https://github.com/suikan4github/PaleALE/compare/v1.1.4...v1.1.5
