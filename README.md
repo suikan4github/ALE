@@ -1,7 +1,7 @@
 # PaleALE
 PaleALE : Pale - A Latex Environmentは、Visual Studio Codeエディタを使う
 LaTeX執筆環境の構築用スクリプト、ツール、およびサンプルLaTeX文書の
-コレクションです
+コレクションです。
 ## 概要
 PaleALEプロジェクトの目的は二つあります。
 - Visual Sudio CodeによるLaTeX執筆環境を作るためのインストール・スクリプトを提供する
@@ -22,13 +22,21 @@ PDF以外の画像はスクリプトによってPDFに変換されます。変�
 
 画像の変換はLaTeXのビルド・シーケンスに組み込まれているため、手作業で変換スクリプトを呼ぶ必要はありません。
 
+## 対応環境
+PaleALEのインストール・スクリプトは以下の環境に対して動作します。
+- Ubuntu Desktop 22.04 LTS ( x86_64)
+- Ubuntu Server 22.04 LTS ( x86_64, aarch64 )
+
+試験していませんが、Ubuntu Desktop 22.40 LTS ( aarch64 )でも動作すると思われます。
 ## 試験環境
 
 PaleALEのスクリプトは以下の環境で試験しています。
-- Visual Studio Code on Ubuntu Desktop 22.04 LTS
-- Ubuntu Desktop 22.04 LTS on WSL2 + Visual Studio Code on Windows 10 (VS Code Remote connection)
-- Ubuntu Desktop 22.04 LTS on WSL2 + Visual Studio Code on Windows 11 (VS Code Remote connection)
-- Ubuntu Server 22.04 LTS on VMware + Visual Studio Code on Windows 11 (VS Code SSH connection)
+- VS Code on Ubuntu Desktop 22.04 LTS
+- Ubuntu Desktop 22.04 LTS (x86_64) on WSL2 + VS Code on Windows 10 
+- Ubuntu Desktop 22.04 LTS (x86_64) on WSL2 + VS Code on Windows 11 
+- Ubuntu Server 22.04 LTS (x86_64) + VS Code on Windows 11 (remote SSH connection)
+- Ubuntu Server 22.04 LTS ( aarch64 ) + VS Code on Windows 11 (remote SSH connection)
+
 
 <div align="center">
 <img src="image/env-a.png"  title="PaleALEが想定する環境">
@@ -85,18 +93,6 @@ LaTeXプロジェクトの構造に関しては[FILES.md](FILES.md)を参照し�
 
 ## 既知の問題
 [CHANGELOG](CHANGELOG.md)も参照してください。
-
-### WSLでdraw.ioファイルの変換に失敗する
-この問題はWSL上のUbuntuで発生します。
-非WSLのUbuntu Desktop環境では発生しません。
-
-WSL上のUbuntuにはD-BUSサービスが起動しない問題があります。この問題のためdraw.ioファイルをPDFに変換することが出来ません。
-解決するには事前に以下のコマンドを実行してD-BUSサービスを
-起動しておいてください。
-```
-sudo /etc/init.d/dbus start
-```
-この問題は GitHub Issue [#1](https://github.com/suikan4github/PaleALE/issues/1) として追跡されています。
 
 ### 索引が空の場合にLaTeXのビルドが異常終了する
 ビルドするLaTeX文書において索引ページが空の場合はLaTeXのビルドに失敗します。
