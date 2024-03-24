@@ -54,7 +54,7 @@ aarch64の試験は、Raspberry Pi 3A上のUbuntu Server 22.04で行いました
 各バージョンの全ファイルとビルド済みサンプルPDFが[リリース](https://github.com/suikan4github/PaleALE/releases)として公開されています。プロジェクトページ右のリリースを参照してください。
 
 ## Wiki
-[PaleAle Wiki](https://github.com/suikan4github/PaleALE/wiki)はリリースとは独立した技術情報を公開しています。トラブルがあったときはWikiも参照してみてください。
+[PaleAle Wiki](https://github.com/suikan4github/PaleALE/wiki)はリリースとは独立して技術情報を公開しています。トラブルがあったときはWikiも参照してみてください。
 
 ## 使い方
 LaTeXの執筆を行うには、まず[LaTeX文書のプロジェクト](FILES.md)をVisual Studio Codeで開きます(メニューバー→[File]→[Open Folder ...])。この状態で編集を行います。Visual Sutdio Codeはフォルダのファイル一覧を表示してくれるので、好きなファイルを自由に開くことが出来ます。
