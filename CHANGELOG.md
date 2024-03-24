@@ -7,6 +7,8 @@
 ### Deprecated
 ### Removed
 ### Fixed
+- [Issue #29](https://github.com/suikan4github/PaleALE/issues/29) : インストールスクリプトが複数回root権限を求める
+
 ### Security
 ### Known Issue
 - [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する

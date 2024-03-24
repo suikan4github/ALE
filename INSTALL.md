@@ -16,7 +16,7 @@ PaleALEはVisual Studio Codeをインストールしません。Visual Studio Co
 次にPaleALEプロジェクトのルート・ディレクトリにあるinstallスクリプトを実行してください。引数は不要です。
 
 ```
-./install
+sudo ./install
 ```
 インストール・スクリプトは以下のツールと、その他必要なモジュールをインストールします。
 - TeX Live
@@ -25,13 +25,12 @@ PaleALEはVisual Studio Codeをインストールしません。Visual Studio Co
 
 また、ImageMagickについてはポリシー・ファイルを編集し、PDFデータを出力できるようにします。
 
-インストール中に必要に応じてUbuntuのユーザー・パスワードを聞いてきますので入力してください。パスワードを聞くのはインストール開始時と終了時の2回です。
 
-また、これらとは別にインストール途中に1回ユーザーに問い合わせがあります。
+インストール途中に1回ユーザーに問い合わせがあります。
 
 1. LaTeXのインストールについて、どのようなアクションを取るか。
 
-1.については"I"（インストールを行う）と指定することでインストールを行うことが出来ます。
+これは必ずIと答えてください。
 
 ## LaTeX Workshopのインストールと設定
 [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)はVisual Studio Codeの拡張機能であり、LaTeX文書作成時にユーザーを支援してくれるモジュールです。
