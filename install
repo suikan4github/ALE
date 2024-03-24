@@ -3,6 +3,12 @@
 # Install script of Latex environmente. Tested on Ubuntu 22.04 LTS
 # Note : We support only x86_64 and aarch64
 
+if [[ `id -u` -ne 0 ]]; then
+  # Only root can run this. 
+  echo "Please run as root."
+  exit 1
+fi
+
 # Check the architecture 
     
     # The $CPU must be x86_64 or aarch64
