@@ -7,6 +7,8 @@ LaTeX執筆環境の構築用スクリプト、ツール、およびサンプル
 - Ubuntu Server
 - WSL (Ubuntu)
 
+最新バージョンは[GitHub](https://github.com/suikan4github/PaleALE)で取得できます。
+
 ## 概要
 PaleALEプロジェクトの目的は二つあります。
 - Visual Sudio CodeによるLaTeX執筆環境を作るためのインストール・スクリプトを提供する
@@ -32,7 +34,7 @@ PaleALEのインストール・スクリプトは以下の環境に対して動�
 - Ubuntu Desktop 22.04 LTS ( x86_64)
 - Ubuntu Server 22.04 LTS ( x86_64, aarch64 )
 
-試験していませんが、Ubuntu Desktop 22.40 LTS ( aarch64 )でも動作すると思われます。
+試験していませんが、Arm版Ubuntu Desktop 22.40 LTS ( aarch64 )でも動作すると思われます。
 ## 試験環境
 
 PaleALEのスクリプトは以下の環境で試験しています。
@@ -49,7 +51,7 @@ aarch64の試験は、Raspberry Pi 3A上のUbuntu Server 22.04で行いました
 </div>
 
 ## リリース
-各バージョンの全ファイルとビルド済みサンプルPDFがリリースとして公開されています。プロジェクトページ右のリリースを参照してください。
+各バージョンの全ファイルとビルド済みサンプルPDFが[リリース](https://github.com/suikan4github/PaleALE/releases)として公開されています。プロジェクトページ右のリリースを参照してください。
 
 ## Wiki
 [PaleAle Wiki](https://github.com/suikan4github/PaleALE/wiki)はリリースとは独立した技術情報を公開しています。トラブルがあったときはWikiも参照してみてください。
