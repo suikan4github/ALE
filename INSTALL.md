@@ -36,7 +36,7 @@ Actions:
 Enter command: 
 ````
 
-ここではTeX Liveのインストールについて、どのようなアクションを取るかを聞いています。これは必ずIと答えてください。
+ここではTeX Liveのインストールについて、どのようなアクションを取るかを聞いています。これは必ず I と答えてください。
 
 ## LaTeX Workshopのインストールと設定
 [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)はVisual Studio Codeの拡張機能であり、LaTeX文書作成時にユーザーを支援してくれるモジュールです。
