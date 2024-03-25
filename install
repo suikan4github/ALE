@@ -13,9 +13,9 @@ fi
     
     # The $CPU must be x86_64 or aarch64
     if $(arch | grep -e x86_64 -e aarch64 > /dev/null); then
-        echo OK. We support x86_64 and aarch64 . > /dev/null
+        echo OK. We support the $(arch) architecture.
     else 
-        echo $CPU is not supported. 
+        echo Sorry, but the $(arch) archicture is not supported. 
         exit 1
     fi
 
