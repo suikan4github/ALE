@@ -12,7 +12,7 @@
 - [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
 
 ## [v1.2.1] 2024-03-26
-インストールの最期にルートパスワードをも求めないよう変更。
+インストールの最後にルートパスワードをも求めないよう変更。
 ### Added
 ### Changed
 ### Deprecated
