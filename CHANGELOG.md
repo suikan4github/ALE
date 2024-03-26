@@ -11,6 +11,19 @@
 ### Known Issue
 - [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
 
+## [v1.2.1] 2024-03-26
+インストールの最後にルートパスワードをも求めないよう変更。
+### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+- [Issue #29](https://github.com/suikan4github/PaleALE/issues/29) : インストールスクリプトが複数回root権限を求める
+
+### Security
+### Known Issue
+- [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
+
 
 ## [v1.2.0] 2024-03-25
 AArch64に対応。Raspberry Pi 3Aで試験。
@@ -151,7 +164,8 @@ Windows 10環境のWSLに対応した。
 ## [1.0.0] - 2022-07-24
 最初のリリース
 
-[Unreleased]: https://github.com/suikan4github/PaleALE/compare/v1.2.0...develop
+[Unreleased]: https://github.com/suikan4github/PaleALE/compare/v1.2.1...develop
+[v1.2.1]: https://github.com/suikan4github/PaleALE/compare/v1.2.0...v1.2.1
 [v1.2.0]: https://github.com/suikan4github/PaleALE/compare/v1.1.7...v1.2.0
 [v1.1.7]: https://github.com/suikan4github/PaleALE/compare/v1.1.6...v1.1.7
 [v1.1.6]: https://github.com/suikan4github/PaleALE/compare/v1.1.5...v1.1.6
