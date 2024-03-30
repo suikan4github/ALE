@@ -11,7 +11,7 @@ LaTeX執筆環境の構築用スクリプト、ツール、およびサンプル
 
 ## 概要
 PaleALEプロジェクトの目的は二つあります。
-- Visual Sudio CodeによるLaTeX執筆環境を作るためのインストール・スクリプトを提供する
+- Visual Studio CodeによるLaTeX執筆環境を作るためのインストール・スクリプトを提供する
 - 同環境での執筆のためのツールを提供する
 
 PaleALEが構築する執筆環境はVisual Studio Codeと、その上で動作するLaTeX Workshopプラグインを用いたものです。LaTeX Workshopを使うことで、LaTeXファイルを保存するたびにビルドが自動的に行われ、Visual Studio Code上で即座に生成したPDFファイルが自動的に表示されます。執筆者はビルドのたびにコマンドを叩く必要はありません。
@@ -57,7 +57,7 @@ aarch64の試験は、Raspberry Pi 3A上のUbuntu Server 22.04で行いました
 [PaleAle Wiki](https://github.com/suikan4github/PaleALE/wiki)はリリースとは独立して技術情報を公開しています。トラブルがあったときはWikiも参照してみてください。
 
 ## 使い方
-LaTeXの執筆を行うには、まず[LaTeX文書のプロジェクト](FILES.md)をVisual Studio Codeで開きます(メニューバー→[File]→[Open Folder ...])。この状態で編集を行います。Visual Sutdio Codeはフォルダのファイル一覧を表示してくれるので、好きなファイルを自由に開くことが出来ます。
+LaTeXの執筆を行うには、まず[LaTeX文書のプロジェクト](FILES.md)をVisual Studio Codeで開きます(メニューバー→[File]→[Open Folder ...])。この状態で編集を行います。Visual Studio Codeはフォルダのファイル一覧を表示してくれるので、好きなファイルを自由に開くことが出来ます。
 
 LaTeX文書のソース・ファイル(.tex)を開いた状態で以下のショートカットを利用できます。
 - Alt-Ctrl-B : LaTeX文書のビルド
@@ -84,7 +84,7 @@ PaleALE
     ├── 000_preface.tex
     ├── 010_body.tex
     ├── a10_appendix.tex
-    ├── b10_authers_note.tex
+    ├── b10_authrs_note.tex
     ├── image
     ├── image_src
     │   ├── diagram.drawio

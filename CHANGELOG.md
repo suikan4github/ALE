@@ -11,6 +11,17 @@
 ### Known Issue
 - [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
 
+## [v1.2.2] 2024-03-31
+サンプル文章のデスクトップ共有をActual Multiple MOnitorsに置き換えた。
+### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+### Known Issue
+- [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
+
 ## [v1.2.1] 2024-03-26
 インストールの最後にルートパスワードをも求めないよう変更。
 ### Added
@@ -164,7 +175,8 @@ Windows 10環境のWSLに対応した。
 ## [1.0.0] - 2022-07-24
 最初のリリース
 
-[Unreleased]: https://github.com/suikan4github/PaleALE/compare/v1.2.1...develop
+[Unreleased]: https://github.com/suikan4github/PaleALE/compare/v1.2.2...develop
+[v1.2.2]: https://github.com/suikan4github/PaleALE/compare/v1.2.1...v1.2.2
 [v1.2.1]: https://github.com/suikan4github/PaleALE/compare/v1.2.0...v1.2.1
 [v1.2.0]: https://github.com/suikan4github/PaleALE/compare/v1.1.7...v1.2.0
 [v1.1.7]: https://github.com/suikan4github/PaleALE/compare/v1.1.6...v1.1.7
