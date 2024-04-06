@@ -188,7 +188,8 @@ Windows 10環境のWSLに対応した。
 ## [1.0.0] - 2022-07-24
 最初のリリース
 
-[Unreleased]: https://github.com/suikan4github/PaleALE/compare/v1.2.2...develop
+[Unreleased]: https://github.com/suikan4github/PaleALE/compare/v1.2.3...develop
+[v1.2.3]: https://github.com/suikan4github/PaleALE/compare/v1.2.2...v1.2.3
 [v1.2.2]: https://github.com/suikan4github/PaleALE/compare/v1.2.1...v1.2.2
 [v1.2.1]: https://github.com/suikan4github/PaleALE/compare/v1.2.0...v1.2.1
 [v1.2.0]: https://github.com/suikan4github/PaleALE/compare/v1.1.7...v1.2.0
