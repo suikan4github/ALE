@@ -11,6 +11,19 @@
 ### Known Issue
 - [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
 
+## [v1.2.3] 2024-04-06
+致命的な問題を修正した。また、このバージョンからTeX Liveのインストール中に質問をしなくなった。
+### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+- [Issue #33](https://github.com/suikan4github/PaleALE/issues/33) : インストールしたlatexmkが見えない
+
+### Security
+### Known Issue
+- [Issue #3](https://github.com/suikan4github/PaleALE/issues/3) : 索引が空の場合にLaTeXのビルドが異常終了する
+
 ## [v1.2.2] 2024-03-31
 サンプル文章のデスクトップ共有をActual Multiple MOnitorsに置き換えた。
 ### Added
