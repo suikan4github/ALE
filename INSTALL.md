@@ -25,18 +25,7 @@ sudo ./install
 
 また、ImageMagickについてはポリシー・ファイルを編集し、PDFデータを出力できるようにします。
 
-
-インストール途中に1回ユーザーに問い合わせがあります。
-````
-Actions:
- <I> start installation to hard disk
- <P> save installation profile to 'texlive.profile' and exit
- <Q> quit
-
-Enter command: 
-````
-
-ここではTeX Liveのインストールについて、どのようなアクションを取るかを聞いています。これは必ず I と答えてください。
+インストールに使用した仮ファイルはすべて /tmp 下に置かれます。これらはUbuntuを再起動した際に消去されます。
 
 ## LaTeX Workshopのインストールと設定
 [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)はVisual Studio Codeの拡張機能であり、LaTeX文書作成時にユーザーを支援してくれるモジュールです。
@@ -136,6 +125,7 @@ Settings.jsonを開いたら、以下のコードを追加してください。�
 ```
 ## LaTeXプロジェクト構造の設定
 LaTeXプロジェクトの構造は、論文や書籍ごとに設定しなければなりません。
+なお、以下の作業が面倒ならば、PaleALEのsample ディレクトリをコピーして修正するとよいでしょう。
 
 必要な作業は以下の通りです。なお、この説明において「文書ルート」とはプロジェクトの最上位ディレクトリの事です。文書ルートにはLaTeXのソース・ファイルをおさめます。すなわち、*.texファイル起き場です。
 1. 文書ルートに.latexmkrcをコピーする

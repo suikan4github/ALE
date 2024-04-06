@@ -3,6 +3,10 @@
 # Install script of Latex environmente. Tested on Ubuntu 22.04 LTS
 # Note : We support only x86_64 and aarch64
 
+#######################################################################
+#
+# Check install condtion 
+#
 if  [ `id -u` -ne 0 ] ; then
   # Only root can run this. 
   echo "ERROR : Please run as root. ex: sudo ./install"
@@ -10,64 +14,82 @@ if  [ `id -u` -ne 0 ] ; then
 fi
 
 # Check the architecture 
-    
-    # The $CPU must be x86_64 or aarch64
-    if $(arch | grep -e x86_64 -e aarch64 > /dev/null); then
-        echo OK. We support the $(arch) architecture.
-    else 
-        echo Sorry, but the $(arch) archicture is not supported. 
-        exit 1
-    fi
+# The $CPU must be x86_64 or aarch64
+if $(arch | grep -e x86_64 -e aarch64 > /dev/null); then
+    echo OK. We support the $(arch) architecture.
+else 
+    echo Sorry, but the $(arch) archicture is not supported. 
+    exit 1
+fi
+
+#######################################################################
+#
+# Install the basic tools  
+#
+
+# Foundemental tools installation
+apt-get update && apt-get upgrade -y
+apt-get install -y git ca-certificates build-essential parallel xvfb cpanminus
+# These are needed for drawio
+apt-get -y install sqlite libgtk-3-0 libgbm1 libasound2 curl
+
+# Suppress to ask use during the cpan run. 
+export PERL_MM_USE_DEFAULT=1 
+# These cpan modules are needed by tex live
+cpanm YAML::Tiny
+cpanm File::HomeDir
+
+# Install ImageMagick
+apt-get install -y imagemagick 
+
+#######################################################################
+#
+# Tweeting imagemagik to alloww generating the PDF. 
+#
+
+# delete the PDF policy line from the /etc/ImageMagic*/policy.xml
+find /etc/ImageMagic*/policy.xml | xargs sed -i /^.*pattern=\"PDF\".*$/d 
 
 
-# Use subshell to encapsule the effect of umask
-(
+#######################################################################
+#
+# Create a working directory for installing drawio and TeX live
+#
+timestamp=$(date +%Y%m%d%H%M%S)
 
-    # Foundemental tools installation
-    apt-get update && apt-get upgrade -y
-    apt-get install -y git ca-certificates build-essential parallel xvfb cpanminus
+# Make safe directory under the /tmp
+tmpd=$( mktemp -dt "PaleALE.$USER.$timestamp.XXXXXX")/
+# Trap handler to delete the directory, at the end of the script.
+trap "cd -; rm -rf $tmpd; exit 1" EXIT 
 
-    # Create working directory for installing. 
-    umask 077   # Secure the temp directory.
-    timestamp=$(date +%Y%m%d%H%M%S)
-    # Make safe directory under the /tmp
-    tmpd=$( mktemp -dt "PaleALE.$USER.$timestamp.XXXXXX")/
-    cd $tmpd
+cd $tmpd
 
-    # Suppress to ask use during the cpan run. 
-    export PERL_MM_USE_DEFAULT=1 
-    # These cpan modules are needed.
-    cpanm YAML::Tiny
-    cpanm File::HomeDir
+#######################################################################
+#
+# Installind drawio.
+#
+# Note, all supported architecture files will be downloaded at first.
+curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep '\.deb' | cut -d '"' -f 4 | wget -i -
 
-    # Draw IO（ドローイングプログラム）の取得とインストール
-    apt-get -y install sqlite libgtk-3-0 libgbm1 libasound2 curl
-    curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep '\.deb' | cut -d '"' -f 4 | wget -i -
+# Install the appropriate file based on the architecture. 
+if $(arch | grep x86_64 > /dev/null); then
+    apt -f install -y ./drawio-amd64-*.deb
+elif $(arch | grep aarch64 > /dev/null); then
+    apt -f install -y ./drawio-arm64-*.deb
+else 
+    echo Program logic error at Draw.IO installation.
+    exit 1
+fi
 
-    if $(arch | grep x86_64 > /dev/null); then
-        apt -f install -y ./drawio-amd64-*.deb
-    elif $(arch | grep aarch64 > /dev/null); then
-        apt -f install -y ./drawio-arm64-*.deb
-    else 
-        echo Program logic error at Draw.IO installation.
-        exit 1
-    fi
+#######################################################################
+#
+# Install TeX Live
+#
+wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+tar xvf install-tl-unx.tar.gz
+cd install-tl-2*
+./install-tl -no-gui -no-interaction -repository http://mirror.ctan.org/systems/texlive/tlnet/
+# Adding path of TeX
+/usr/local/texlive/????/bin/*/tlmgr path add
 
-    # Install ImageMagick
-    apt-get install -y imagemagick 
-    # Allowing to generate the PDF. 
-    # delete the PDF policy line from the /etc/ImageMagic*/policy.xml
-    find /etc/ImageMagic*/policy.xml | xargs sed -i /^.*pattern=\"PDF\".*$/d 
-
-
-    # Install TeX Live
-    wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
-    tar xvf install-tl-unx.tar.gz
-    cd install-tl-2*
-    ./install-tl -no-gui -repository http://mirror.ctan.org/systems/texlive/tlnet/
-    # Adding path of TeX
-    /usr/local/texlive/????/bin/*/tlmgr path add
- 
-   # Leave the working directory by exiting subshell
-)
 
